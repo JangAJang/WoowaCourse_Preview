@@ -1,4 +1,0 @@
-baseball/NumberTest.java
- baseball.NumberTest
-baseball/ApplicationTest.java
- baseball.ApplicationTest
