@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseball.model.ComputerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-07T12:21:44" hostname="ijanghuiui-MacBookPro.local" time="0.0">
+  <properties/>
+  <testcase name="숫자_생성시_모두_다른_3개_1부터_9의_자연수()" classname="baseball.model.ComputerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

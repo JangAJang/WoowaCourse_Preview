@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseball.view.GameStatusViewTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-07T12:21:44" hostname="ijanghuiui-MacBookPro.local" time="0.0">
+  <properties/>
+  <testcase name="입력시에_문자열로_저장해_문자열로_반환()" classname="baseball.view.GameStatusViewTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

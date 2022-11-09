@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseball.service.GameStatusServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-11-07T12:21:44" hostname="ijanghuiui-MacBookPro.local" time="0.002">
+  <properties/>
+  <testcase name="입력이_1이면_게임상태_참으로_유지()" classname="baseball.service.GameStatusServiceTest" time="0.001"/>
+  <testcase name="입력이_2이면_게임상태_거짓으로_초기화()" classname="baseball.service.GameStatusServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

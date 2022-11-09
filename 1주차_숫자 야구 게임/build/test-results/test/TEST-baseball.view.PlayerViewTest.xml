@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseball.view.PlayerViewTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-11-07T12:21:44" hostname="ijanghuiui-MacBookPro.local" time="0.003">
+  <properties/>
+  <testcase name="입력이_숫자가_네자리면_예외처리()" classname="baseball.view.PlayerViewTest" time="0.0"/>
+  <testcase name="입력이_숫자가_같으면_예외처리()" classname="baseball.view.PlayerViewTest" time="0.0"/>
+  <testcase name="입력_문자열이_정상반환_되는지()" classname="baseball.view.PlayerViewTest" time="0.001"/>
+  <testcase name="입력이_숫자가_없으면_있으면_예외처리()" classname="baseball.view.PlayerViewTest" time="0.001"/>
+  <testcase name="입력이_숫자가_0이_있으면_예외처리()" classname="baseball.view.PlayerViewTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

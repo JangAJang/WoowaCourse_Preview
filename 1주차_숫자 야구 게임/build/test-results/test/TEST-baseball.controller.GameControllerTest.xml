@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseball.controller.GameControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-11-07T12:21:44" hostname="ijanghuiui-MacBookPro.local" time="0.006">
+  <properties/>
+  <testcase name="게임_초기화시_gameStatus는_참()" classname="baseball.controller.GameControllerTest" time="0.001"/>
+  <testcase name="getPlayerOpinion_입력_올바를시_문자열반환()" classname="baseball.controller.GameControllerTest" time="0.001"/>
+  <testcase name="clearScore진행시_스트라이크와_볼은_0()" classname="baseball.controller.GameControllerTest" time="0.002"/>
+  <testcase name="setGameStatus에_2입력시_gameStatus_거짓으로_초기화()" classname="baseball.controller.GameControllerTest" time="0.001"/>
+  <testcase name="플레이어입출력_요청시_요청문부터_출력까지_진행()" classname="baseball.controller.GameControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
