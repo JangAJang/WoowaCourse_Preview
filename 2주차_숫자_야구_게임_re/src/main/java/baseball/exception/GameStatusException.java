@@ -10,11 +10,11 @@ public class GameStatusException {
     }
 
     private boolean isNotOne(String input){
-        return input.equals(ONE);
+        return !input.equals(ONE);
     }
 
     private boolean isNotTwo(String input){
-        return false;
+        return !input.equals(TWO);
     }
 
     private void notRightGameStatusException(){
