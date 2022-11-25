@@ -7,6 +7,7 @@ public class PlayerInputException {
     private static final String NOT_RIGHT_PLAYER_INPUT_EXCEPTION = "[ERROR] 입력은 1~9로 이루어진 숫자 3개여야 합니다";
 
     public String validate(String input){
+        if(isNotNumber(input) || isNotThreeDigit(input) || containsZero(input)) notRightPlayerNumberException();
         return input;
     }
 
