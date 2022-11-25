@@ -17,7 +17,7 @@ public class PlayerInputException {
     }
 
     private boolean containsZero(String input){
-        return false;
+        return input.contains("0");
     }
 
     private void notRightPlayerNumberException(){
