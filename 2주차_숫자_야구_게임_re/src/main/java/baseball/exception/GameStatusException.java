@@ -8,7 +8,7 @@ public class GameStatusException {
     private static final String TWO = "2";
 
     public String validate(String input){
-        if(isNotOne(input) || isNotTwo(input)) notRightGameStatusException();
+        if(isNotOne(input) && isNotTwo(input)) notRightGameStatusException();
         return input;
     }
 
