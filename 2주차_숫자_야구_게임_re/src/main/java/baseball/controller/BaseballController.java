@@ -29,7 +29,7 @@ public class BaseballController {
         do{
             makePlayer();
             concludeRound();
-        }while(isThreeStrike());
+        }while(!isThreeStrike());
         printFinish();
     }
 
