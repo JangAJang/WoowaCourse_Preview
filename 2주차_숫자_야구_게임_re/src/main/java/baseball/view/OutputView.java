@@ -28,5 +28,9 @@ public class OutputView {
         return strike == 0;
     }
 
+    private String stateOnlyStrike(int strike){
+        return strike + STRIKE_COMMAND;
+    }
+
 
 }
