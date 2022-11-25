@@ -36,5 +36,7 @@ public class OutputView {
         return ball + BALL_COMMAND;
     }
 
-
+    private String stateBoth(int strike, int ball){
+        return stateOnlyBall(ball) + stateOnlyStrike(strike);
+    }
 }
