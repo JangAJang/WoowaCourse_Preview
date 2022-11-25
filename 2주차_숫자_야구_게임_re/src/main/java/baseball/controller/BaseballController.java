@@ -27,4 +27,9 @@ public class BaseballController {
         baseball.createPlayer(inputView.readPlayerNumber());
     }
 
+    private void concludeRound(){
+        outputView.printScore(baseball.countBallWithPlayer()
+                , baseball.countStrikeWithPlayer());
+    }
+
 }
