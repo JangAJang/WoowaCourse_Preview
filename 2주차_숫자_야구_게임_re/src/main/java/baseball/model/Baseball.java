@@ -5,15 +5,14 @@ import baseball.domain.RandomNumbers;
 
 public class Baseball {
 
-    private RandomNumbers randomNumbers;
+    private final RandomNumbers randomNumbers;
     private Player player;
 
     public Baseball(){
-
+        randomNumbers = new RandomNumbers();
     }
 
     public void createPlayer(String input){
-
     }
 
     public int countStrikeWithPlayer(){
