@@ -32,4 +32,8 @@ public class BaseballController {
                 , baseball.countStrikeWithPlayer());
     }
 
+    private boolean isThreeStrike(){
+        return baseball.isThreeStrike();
+    }
+
 }
