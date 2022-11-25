@@ -1,5 +1,6 @@
 package baseball.view;
 
+import baseball.exception.GameStatusException;
 import baseball.exception.PlayerInputException;
 import camp.nextstep.edu.missionutils.Console;
 
@@ -28,5 +29,10 @@ public class InputView {
 
     private void requestGameStatus(){
         System.out.println(GAME_STATUS_REQUEST);
+    }
+
+    private String validateGameStatus(String input){
+        GameStatusException gameStatusException = new GameStatusException();
+        return gameStatusException.validate(input);
     }
 }
