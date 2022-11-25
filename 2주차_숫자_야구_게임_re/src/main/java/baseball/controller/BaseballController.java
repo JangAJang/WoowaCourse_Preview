@@ -1,7 +1,6 @@
 package baseball.controller;
 
-import baseball.domain.Player;
-import baseball.domain.RandomNumbers;
+import baseball.model.Baseball;
 import baseball.view.InputView;
 import baseball.view.OutputView;
 
@@ -9,15 +8,19 @@ public class BaseballController {
 
     private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
-    private Player player;
-    private RandomNumbers randomNumbers;
+    private Baseball baseball;
 
     public BaseballController(){
-
+        initializeGame();
+        createAnswer();
     }
 
     private void initializeGame(){
         outputView.startGame();
+    }
+
+    private void createAnswer(){
+        baseball = new Baseball();
     }
 
 }
