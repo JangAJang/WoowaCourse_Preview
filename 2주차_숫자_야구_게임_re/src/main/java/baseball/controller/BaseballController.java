@@ -17,6 +17,14 @@ public class BaseballController {
         createAnswer();
     }
 
+    public void runGame(){
+        while(true){
+            playUntilFinish();
+            if (isOutputQuit()) break;
+            resetGame();
+        }
+    }
+
     private void playUntilFinish(){
         while(isThreeStrike()) {
             makePlayer();
