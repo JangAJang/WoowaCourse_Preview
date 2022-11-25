@@ -13,7 +13,7 @@ public class PlayerInputException {
     }
 
     private boolean isNotThreeDigit(String input){
-        return false;
+        return input.length()!= 3;
     }
 
     private boolean containsZero(String input){
