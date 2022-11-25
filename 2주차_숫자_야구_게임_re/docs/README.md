@@ -6,15 +6,15 @@
 3. countBall : 정수형 리스트를 입력받아 전역변수와 비교해 인덱스는 다르지만 전역변수에 포함하는 정수형 리스트의 원소 개수를 반환한다. 
 ### Player
 1. 생성자 : 문자열을 입력받아 정수형 리스트로 반환한다. 
-   1. makeInputToNumbers : 문자열을 정수형 리스트로 전환해 반환한다. 
+   1. makeInputToNumbers : 문자열을 정수형 리스트로 전환해 저장한다. 
 2. getPlayerNumbers : 정수형 리스트를 반환한다. 
 
 ##  Model
 ### Baseball
-1. 생성자 : Numbers를 생성한다. 
+1. 생성자 : RandomNumbers 생성한다. 
 2. createPlayer : 입력변수 문자열로 Player을 생성한다. 
-3. countStrikeWithPlayer : 플레이어의 정수형 리스틀 입력받아 Number.countStrike를 반환한다. 
-4. countBallWithPlayer : 플레이어의 정수형 리스틀 입력받아 Number.countBall을 반환한다.
+3. countStrikeWithPlayer : 플레이어의 정수형 리스틀 입력받아 RandomNumbers.countStrike를 반환한다. 
+4. countBallWithPlayer : 플레이어의 정수형 리스틀 입력받아 RandomNumbers.countBall을 반환한다.
 5. isThreeStrike : countStrikeWithPlayer == 3이면 참을 반환한다. 
 
 ## Exception
