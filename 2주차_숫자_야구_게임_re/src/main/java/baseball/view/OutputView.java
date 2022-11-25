@@ -11,4 +11,8 @@ public class OutputView {
     public void startGame(){
         System.out.println(START_COMMAND);
     }
+
+    public void printSuccess(){
+        System.out.println(END_COMMAND);
+    }
 }
