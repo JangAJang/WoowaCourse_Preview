@@ -16,6 +16,13 @@ public class OutputView {
         System.out.println(END_COMMAND);
     }
 
+    private String makeResultStatement(int ball, int strike){
+        if(isNothing(ball, strike)) return NOTHING;
+        if(isOnlyBall(strike)) return stateOnlyBall(ball);
+        if(isOnlyStrike(ball)) return stateOnlyStrike(strike);
+        return stateBoth(strike, ball);
+    }
+
     private boolean isNothing(int ball, int strike){
         return ball == 0 && strike == 0;
     }
