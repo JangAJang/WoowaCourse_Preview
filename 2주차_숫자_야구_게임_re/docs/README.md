@@ -64,3 +64,4 @@
 4. isThreeStrike : Baseball.isThreeStrike를 반환한다. 
 5. isOutputQuit : InputView.readGameCommand가 '2'와 같으면 참을 반환한다. 
 6. resetGame : Baseball을 초기화해준다. 
+7. printFinish : 게임 종료를 출력시킨다. 

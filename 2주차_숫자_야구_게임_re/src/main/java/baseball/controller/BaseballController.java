@@ -42,4 +42,7 @@ public class BaseballController {
         return inputView.readGameCommand().equals(QUIT);
     }
 
+    private void printFinish(){
+        outputView.printSuccess();
+    }
 }
