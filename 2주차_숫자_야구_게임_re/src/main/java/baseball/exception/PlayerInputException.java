@@ -1,5 +1,7 @@
 package baseball.exception;
 
+import java.util.regex.Pattern;
+
 public class PlayerInputException {
 
     public String validate(String input){
@@ -7,7 +9,7 @@ public class PlayerInputException {
     }
 
     private boolean isNotNumber(String input){
-        return false;
+        return !Pattern.matches("^[1-9]*$", input);
     }
 
     private boolean isNotThreeDigit(String input){
