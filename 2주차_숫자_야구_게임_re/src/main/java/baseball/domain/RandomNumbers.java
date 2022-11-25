@@ -28,11 +28,21 @@ public class RandomNumbers {
     }
 
     private int getCountOfStrikeAtIndex(int index, List<Integer> playerNumbers){
-        if(Objects.equals(playerNumbers.get(index), numbers.get(index))) return 1;
+        if(playerNumbers.get(index).equals(numbers.get(index))) return 1;
         return 0;
     }
 
     public int countBall(List<Integer> playerNumbers){
-        return 1;
+        int count = 0;
+        for(int index = 0; index < playerNumbers.size(); index++){
+            count += getCountOfBallAtIndex(index, playerNumbers);
+        }
+        return count;
+    }
+
+    private int getCountOfBallAtIndex(int index, List<Integer> playerNumbers){
+        if(!playerNumbers.get(index).equals(numbers.get(index))
+            && numbers.contains(playerNumbers.get(index))) return 1;
+        return 0;
     }
 }

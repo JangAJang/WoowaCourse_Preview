@@ -21,7 +21,7 @@ public class RandomNumbersTest {
     @DisplayName("볼 카운트를 할 때 값은 항상 0에서 3사이 이다. ")
     @Test
     void countBallTest(){
-        assertThat(randomNumbers.countStrike(List.of(1, 2, 3)))
+        assertThat(randomNumbers.countBall(List.of(1, 2, 3)))
                 .isLessThanOrEqualTo(3)
                 .isGreaterThanOrEqualTo(0);
     }
