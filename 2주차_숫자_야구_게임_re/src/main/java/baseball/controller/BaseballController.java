@@ -23,4 +23,8 @@ public class BaseballController {
         baseball = new Baseball();
     }
 
+    private void makePlayer(){
+        baseball.createPlayer(inputView.readPlayerNumber());
+    }
+
 }
