@@ -15,4 +15,8 @@ public class OutputView {
     public void printSuccess(){
         System.out.println(END_COMMAND);
     }
+
+    private boolean isNothing(int ball, int strike){
+        return ball == 0 && strike == 0;
+    }
 }
