@@ -62,5 +62,5 @@
 2. makePlayer : InputView.readPlayerNumber의 값으로 Baseball.createPlayer해준다. 
 3. concludeRound : Baseball.countStrike, Baseball.countBall을 OutputView.printScore에 넣어 출력한다. 
 4. isThreeStrike : Baseball.isThreeStrike를 반환한다. 
-5. isOutputQuit : OutputView.readGameCommand가 '2'와 같으면 참을 반환한다. 
+5. isOutputQuit : InputView.readGameCommand가 '2'와 같으면 참을 반환한다. 
 6. resetGame : Baseball을 초기화해준다. 

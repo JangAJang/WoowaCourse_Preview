@@ -6,6 +6,8 @@ import baseball.view.OutputView;
 
 public class BaseballController {
 
+    private static final String QUIT = "2";
+
     private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
     private Baseball baseball;
@@ -34,6 +36,10 @@ public class BaseballController {
 
     private boolean isThreeStrike(){
         return baseball.isThreeStrike();
+    }
+
+    private boolean isOutputQuit(){
+        return inputView.readGameCommand().equals(QUIT);
     }
 
 }
