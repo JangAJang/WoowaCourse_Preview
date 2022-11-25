@@ -14,6 +14,11 @@ public class InputView {
         return validateNumbers(scanInput());
     }
 
+    public String readGameCommand(){
+        requestGameStatus();
+        return validateGameStatus(scanInput());
+    }
+
     private void requestNumbers(){
         System.out.print(INPUT_REQUEST);
     }
