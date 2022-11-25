@@ -13,6 +13,7 @@ public class Baseball {
     }
 
     public void createPlayer(String input){
+        player = new Player(input);
     }
 
     public int countStrikeWithPlayer(){
