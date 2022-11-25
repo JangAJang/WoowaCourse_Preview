@@ -45,4 +45,8 @@ public class BaseballController {
     private void printFinish(){
         outputView.printSuccess();
     }
+
+    private void resetGame(){
+        baseball = new Baseball();
+    }
 }
