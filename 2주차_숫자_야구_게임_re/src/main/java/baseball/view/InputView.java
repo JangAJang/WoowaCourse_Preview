@@ -1,5 +1,6 @@
 package baseball.view;
 
+import baseball.exception.PlayerInputException;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
@@ -12,5 +13,10 @@ public class InputView {
 
     private String scanInput(){
         return Console.readLine();
+    }
+
+    private String validateNumbers(String input){
+        PlayerInputException playerInputException = new PlayerInputException();
+        return playerInputException.validate(input);
     }
 }
