@@ -21,7 +21,7 @@ public class Baseball {
     }
 
     public int countBallWithPlayer(){
-        return 0;
+        return randomNumbers.countBall(player.getNumbers());
     }
 
     public boolean isThreeStrike(){
