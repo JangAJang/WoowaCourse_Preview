@@ -16,6 +16,10 @@ public class OutputView {
         System.out.println(END_COMMAND);
     }
 
+    public void printScore(int ball, int strike){
+        System.out.println(makeResultStatement(ball, strike));
+    }
+
     private String makeResultStatement(int ball, int strike){
         if(isNothing(ball, strike)) return NOTHING;
         if(isOnlyBall(strike)) return stateOnlyBall(ball);
