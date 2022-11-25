@@ -5,6 +5,8 @@ import baseball.domain.RandomNumbers;
 
 public class Baseball {
 
+    private static final int THREE_STRIKE = 3;
+
     private final RandomNumbers randomNumbers;
     private Player player;
 
@@ -25,6 +27,6 @@ public class Baseball {
     }
 
     public boolean isThreeStrike(){
-        return false;
+        return countStrikeWithPlayer() == THREE_STRIKE;
     }
 }
