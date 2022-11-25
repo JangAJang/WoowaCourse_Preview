@@ -19,4 +19,10 @@ public class OutputView {
     private boolean isNothing(int ball, int strike){
         return ball == 0 && strike == 0;
     }
+
+    private boolean isOnlyStrike(int ball, int strike){
+        return ball == 0;
+    }
+
+
 }
