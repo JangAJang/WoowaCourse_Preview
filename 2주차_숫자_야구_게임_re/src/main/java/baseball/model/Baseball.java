@@ -17,7 +17,7 @@ public class Baseball {
     }
 
     public int countStrikeWithPlayer(){
-        return 0;
+        return randomNumbers.countStrike(player.getNumbers());
     }
 
     public int countBallWithPlayer(){
