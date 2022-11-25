@@ -26,10 +26,10 @@ public class BaseballController {
     }
 
     private void playUntilFinish(){
-        while(isThreeStrike()) {
+        do{
             makePlayer();
             concludeRound();
-        }
+        }while(isThreeStrike());
         printFinish();
     }
 
