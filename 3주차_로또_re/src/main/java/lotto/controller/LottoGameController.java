@@ -28,6 +28,8 @@ public class LottoGameController {
     }
 
     private void showResultOfGame(){
-
+        outputView.printStart();
+        outputView.printResult(lottoGame.matchLotto());
+        outputView.printProfit(lottoGame.calculatePlayerProfit());
     }
 }
