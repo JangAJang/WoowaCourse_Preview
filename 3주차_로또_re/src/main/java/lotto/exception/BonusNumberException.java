@@ -6,6 +6,9 @@ import java.util.regex.Pattern;
 
 public class BonusNumberException {
 
+    private static final int MAXIMUM_NUMBER = 45;
+    private static final int MINIMUM_NUMBER = 1;
+
     public int validate(String bonusNumber, Lotto lotto){
         return Integer.parseInt(bonusNumber);
     }
@@ -19,7 +22,7 @@ public class BonusNumberException {
     }
 
     private boolean isOutOfRange(String bonusNumber){
-        return false;
+        return Integer.parseInt(bonusNumber) < MINIMUM_NUMBER || Integer.parseInt(bonusNumber) > MAXIMUM_NUMBER;
     }
 
     private void notRightBonusNumberException(){
