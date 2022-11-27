@@ -23,7 +23,11 @@ public class Player {
     }
 
     public HashMap<GameResult, Integer> makeResultByWinningLotto(WinningLotto winningLotto){
-        return new HashMap<>();
+        HashMap<GameResult, Integer> statistics = initializeStatistics();
+        for(Lotto lottoEach : playerLotto){
+            addDataToStatistics(statistics, winningLotto.makeResultOfLotto(lottoEach));
+        }
+        return statistics;
     }
 
     private HashMap<GameResult, Integer> initializeStatistics(){
@@ -35,6 +39,10 @@ public class Player {
         winningStatistics.put(GameResult.FIVE_WITH_BONUS, 0);
         winningStatistics.put(GameResult.SIX, 0);
         return winningStatistics;
+    }
+
+    private void addDataToStatistics(HashMap<GameResult, Integer> map, GameResult data){
+        map.replace(data, map.get(data), map.get(data)+1);
     }
 
     public List<List<Integer>> getPlayerLottoNumbers(){
