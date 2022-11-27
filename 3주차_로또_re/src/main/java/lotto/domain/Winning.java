@@ -35,4 +35,8 @@ public class Winning {
     private String calculatePercent(long price, long payment){
         return String.format("%.1f", (((double)price / (double)payment) * 100));
     }
+
+    public HashMap<GameResult, Integer> getWinningStatistics() {
+        return winningStatistics;
+    }
 }
