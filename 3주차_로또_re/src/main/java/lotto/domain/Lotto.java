@@ -22,10 +22,15 @@ public class Lotto {
     }
 
     public int matchWithPlayerLotto(List<Integer> playerNumbers){
-        return 0;
+        int result = 0;
+        for(int numberEach : playerNumbers){
+            result += countMatch(numberEach);
+        }
+        return result;
     }
 
-    private int countMatch(List<Integer> playerNumbers){
+    private int countMatch(int numberEach){
+        if(numbers.contains(numberEach)) return 1;
         return 0;
     }
 
