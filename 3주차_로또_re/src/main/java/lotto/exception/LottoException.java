@@ -12,6 +12,8 @@ public class LottoException {
     private static final String NOT_RIGHT_LOTTO_COMMENT = "[ERROR] 로또의 번호는 1부터 45까지의 숫자 6개여야 합니다. ";
 
     public List<Integer> validate(List<Integer> numbers){
+        if(isNumbersOutOfRange(numbers) || isNotSixNumbers(numbers) || containsSameNumber(numbers))
+            notRightNumbersException();
         return numbers;
     }
 
