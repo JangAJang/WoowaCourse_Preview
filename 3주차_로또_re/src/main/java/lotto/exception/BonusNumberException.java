@@ -15,7 +15,7 @@ public class BonusNumberException {
     }
 
     private boolean isAlreadyInLotto(String bonusNumber, Lotto lotto){
-        return false;
+        return lotto.containsBonusNumber(Integer.parseInt(bonusNumber));
     }
 
     private boolean isOutOfRange(String bonusNumber){
