@@ -14,14 +14,14 @@ public class InputView {
     }
 
     public String readPayment(){
-        return null;
+        return readInput(REQUEST_PAYMENT);
     }
 
     public String readWinningNumbers(){
-        return null;
+        return readInput(REQUEST_WINNING);
     }
 
     public String readBonusNumber(){
-        return null;
+       return readInput(REQUEST_BONUS);
     }
 }
