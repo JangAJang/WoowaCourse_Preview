@@ -2,19 +2,27 @@ package lotto.exception;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class LottoInputException {
+
+    private static final String NOT_NUMBER_LOTTO_COMMENT = "[ERROR] 로또는 숫자로 이루어져야 합니다. ";
 
     public List<Integer> validate(String input){
         return new ArrayList<>();
     }
 
+    private void validateEach(String inputEach){
+        if(isNotNumber(inputEach)) inputNotNumberException();
+    }
+
     private boolean isNotNumber(String input){
-        return false;
+        return !Pattern.matches("^[0-9]*$", input);
     }
 
     private void inputNotNumberException(){
-
+        System.out.println(NOT_NUMBER_LOTTO_COMMENT);
+        throw new IllegalArgumentException();
     }
 
     private List<Integer> convertToLottoNumbers(String input){
