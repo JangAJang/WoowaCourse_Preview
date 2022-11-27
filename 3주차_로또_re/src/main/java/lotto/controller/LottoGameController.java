@@ -6,7 +6,7 @@ import lotto.view.OutputView;
 
 public class LottoGameController {
 
-    private final LottoGame lottoGame;
+    private final LottoGame lottoGame = new LottoGame(1000L);
     private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
 
