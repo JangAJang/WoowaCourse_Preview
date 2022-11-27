@@ -25,7 +25,11 @@ public class Winning {
     }
 
     private long countLotto(){
-        return 0L;
+        long price = 0L;
+        for(GameResult resultEach : winningStatistics.keySet()){
+            price += winningStatistics.get(resultEach) * 1000;
+        }
+        return price;
     }
 
     private long convertResultToPrice(){
