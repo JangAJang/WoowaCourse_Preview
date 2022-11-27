@@ -17,7 +17,11 @@ public class Winning {
     }
 
     private long addTotalWinning(){
-        return 0L;
+        long price = 0L;
+        for(GameResult resultEach : winningStatistics.keySet()){
+            price += winningStatistics.get(resultEach) * resultEach.getPrice();
+        }
+        return price;
     }
 
     private long countLotto(){
