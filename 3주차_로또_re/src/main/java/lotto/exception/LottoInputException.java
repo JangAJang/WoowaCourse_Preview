@@ -9,7 +9,8 @@ public class LottoInputException {
     private static final String NOT_NUMBER_LOTTO_COMMENT = "[ERROR] 로또는 숫자로 이루어져야 합니다. ";
 
     public List<Integer> validate(String input){
-        return new ArrayList<>();
+        for(String inputEach : input.split(",")) validateEach(inputEach);
+        return convertToLottoNumbers(input);
     }
 
     private void validateEach(String inputEach){
