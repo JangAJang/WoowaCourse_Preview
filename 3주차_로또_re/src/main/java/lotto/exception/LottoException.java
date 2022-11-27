@@ -9,6 +9,7 @@ public class LottoException {
     private static final int MINIMUM_NUMBER = 1;
     private static final int MAXIMUM_NUMBER = 45;
     private static final int NUMBERS_COUNT = 6;
+    private static final String NOT_RIGHT_LOTTO_COMMENT = "[ERROR] 로또의 번호는 1부터 45까지의 숫자 6개여야 합니다. ";
 
     public List<Integer> validate(List<Integer> numbers){
         return numbers;
@@ -34,6 +35,7 @@ public class LottoException {
     }
 
     private void notRightNumbersException(){
-
+        System.out.println(NOT_RIGHT_LOTTO_COMMENT);
+        throw new IllegalArgumentException();
     }
 }
