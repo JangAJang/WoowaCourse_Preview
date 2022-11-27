@@ -16,7 +16,9 @@ public class LottoGameController {
     }
 
     public void run(){
-
+        showPlayerNumbers();
+        generateWinningLotto();
+        showResultOfGame();
     }
 
     private void showPlayerNumbers(){
