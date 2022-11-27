@@ -67,6 +67,8 @@ getPrice로 괄호의 두 번째 값을 Long타입으로 반환한다.
 1. 생성자 : int형 변수를 입력받아 List<Lotto>를 생성한다. 사이즈가 변수와 같아질 때 까지 Randoms로 로또를 만들어준다. 
 2. matchResultByWinningLotto : WinningLotto를 입력받아 결과를 GameResult형 해시맵으로 반환한다. 
    1. matchEachByWinning : WinningLotto.makeResultOfLotto에 인스턴의 로또 하나를 넣어 결과를 반환한다. 
+   2. initializeStatistics : 해시맵을 생성해 반환한다. 
+   3. addDataToStatistics : matchEachByWinning한 값을 해시맵에 넣어준다. 
 3. getPlayersLottoNumbers : List<Lotto>를 List<List<Integer>>로 반환한다. 
 
 ## Model

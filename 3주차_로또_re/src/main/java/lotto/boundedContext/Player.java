@@ -26,6 +26,17 @@ public class Player {
         return new HashMap<>();
     }
 
+    private HashMap<GameResult, Integer> initializeStatistics(){
+        HashMap<GameResult, Integer> winningStatistics = new HashMap<>();
+        winningStatistics.put(GameResult.NOTHING, 0);
+        winningStatistics.put(GameResult.THREE, 0);
+        winningStatistics.put(GameResult.FOUR, 0);
+        winningStatistics.put(GameResult.FIVE, 0);
+        winningStatistics.put(GameResult.FIVE_WITH_BONUS, 0);
+        winningStatistics.put(GameResult.SIX, 0);
+        return winningStatistics;
+    }
+
     public List<List<Integer>> getPlayerLottoNumbers(){
         List<List<Integer>> playerNumbers = new ArrayList<>();
         for(Lotto lottoEach: playerLotto){
