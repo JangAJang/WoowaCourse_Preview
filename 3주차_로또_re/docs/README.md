@@ -15,16 +15,16 @@
 
 ### BonusNumberException
 1. validate
-   1. isAlreadyInLotto : 입력변수 Lotto.containsBonusNumber를 반환한다. 
-   2. isOutOfRange : 입력변수가 1부터 45가 아닐 경우 참을 반환한다.
-   3. notRightBonusNumberException : 예외처리 출력문과 IllegalArgumentException을 throw해준다.
+   1. isNotNumber : 숫자가 아니면 예외처리
+   2. isAlreadyInLotto : 입력변수 Lotto.containsBonusNumber를 반환한다. 
+   3. isOutOfRange : 입력변수가 1부터 45가 아닐 경우 참을 반환한다.
+   4. notRightBonusNumberException : 예외처리 출력문과 IllegalArgumentException을 throw해준다.
 
 ### LottoInputException
 1. validate
    1. isNotNumber : ','으로 split한 배열이 숫자로 이루어진게 아닐 경우 참을 반환한다. 
    2. inputNotNumberException : 예외처리 출력문과 IllegalArgumentException을 throw한다. 
    3. convertToLottoNumbers : 정수형 리스트로 바꾸어 준다. 
-   4. validateAsNumbers : LottoException.validate을 실행해준다. 
 
 ## Enum
 ### GameResult
@@ -40,7 +40,6 @@ getPrice로 괄호의 두 번째 값을 Long타입으로 반환한다.
 3. containsBonusNumber : 입력변수가 정수형 리스트에 있을 때 참을 반환한다. 
 4. matchWithPlayerLotto : 입력변수로 정수형 리스트를 받아 결과를 반환한다. 
    1. countMatch : 정수형 리스트의 원소중 인스턴스 리스트에 존재하는 원소들의 개수를 반환한다. 
-   2. identifyWinning : 입력변수로 받은 맞춘 개수를 정수형으로 반환한다.
 5. getNumbers
 
 ### Winning
@@ -54,6 +53,7 @@ getPrice로 괄호의 두 번째 값을 Long타입으로 반환한다.
 1. 생성자 : Lotto와 문자열을 입력받는다. BonusNumberException.validate를 해준 후 정수형으로 인스턴스를 초기화시켜준다. 
 2. isHavingBonusNumber : 정수형 리스트를 입력받아 인스턴스를 가지고 있으면 참을 반환한다. 
 
+## Bounded-Context
 ### WinningLotto
 인스턴스로 Lotto와 BonusNumber를 가진다. 
 1. 생성자 : Lotto와 BonusNumber를 입력받아 인스턴스를 초기화시켜준다. 

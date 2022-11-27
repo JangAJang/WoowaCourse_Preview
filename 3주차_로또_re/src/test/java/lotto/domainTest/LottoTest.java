@@ -1,10 +1,13 @@
-package lotto;
+package lotto.domainTest;
 
+import lotto.domain.Lotto;
+import lotto.enums.GameResult;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class LottoTest {
@@ -23,5 +26,18 @@ class LottoTest {
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
-    // 아래에 추가 테스트 작성 가능
+    @DisplayName("보너스 넘버가 이미 있는 경우 참을 반환한다. ")
+    @Test
+    void containsBonusNumberTest(){
+        Lotto lotto = new Lotto(List.of(1, 2, 3, 4, 5, 6));
+        assertThat(lotto.containsBonusNumber(6)).isTrue();
+    }
+
+    @DisplayName("같은 개수에 따라 GameResult형으로 반환한다. ")
+    @Test
+    void matchWithPlayerLottoTest(){
+        Lotto lotto = new Lotto(List.of(1, 2, 3, 4, 5, 6));
+        assertThat(lotto.matchWithPlayerLotto(List.of(1, 2, 3, 4, 5, 6)))
+                .isEqualTo(GameResult.SIX);
+    }
 }
