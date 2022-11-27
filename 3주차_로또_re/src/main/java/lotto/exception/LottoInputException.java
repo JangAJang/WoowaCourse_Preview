@@ -1,8 +1,8 @@
 package lotto.exception;
-
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class LottoInputException {
 
@@ -27,6 +27,6 @@ public class LottoInputException {
     }
 
     private List<Integer> convertToLottoNumbers(String input){
-        return new ArrayList<>();
+        return Arrays.stream(input.split(",")).map(Integer::parseInt).sorted().collect(Collectors.toList());
     }
 }
