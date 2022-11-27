@@ -33,11 +33,11 @@ class LottoTest {
         assertThat(lotto.containsBonusNumber(6)).isTrue();
     }
 
-    @DisplayName("같은 개수에 따라 GameResult형으로 반환한다. ")
+    @DisplayName("같은 개수에 따라 int형으로 반환한다. ")
     @Test
     void matchWithPlayerLottoTest(){
         Lotto lotto = new Lotto(List.of(1, 2, 3, 4, 5, 6));
         assertThat(lotto.matchWithPlayerLotto(List.of(1, 2, 3, 4, 5, 6)))
-                .isEqualTo(GameResult.SIX);
+                .isEqualTo(6);
     }
 }

@@ -9,7 +9,7 @@ public class Winning {
     HashMap<GameResult, Integer> winningStatistics;
 
     public Winning(HashMap<GameResult, Integer> inputStatistics){
-
+        winningStatistics = inputStatistics;
     }
 
     public String calculateProfit(){
