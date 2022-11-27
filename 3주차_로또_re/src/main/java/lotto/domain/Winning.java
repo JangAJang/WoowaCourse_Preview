@@ -13,7 +13,7 @@ public class Winning {
     }
 
     public String calculateProfit(){
-        return null;
+        return calculatePercent(addTotalWinning(), countLotto());
     }
 
     private long addTotalWinning(){
@@ -32,7 +32,7 @@ public class Winning {
         return price;
     }
 
-    private long convertResultToPrice(){
-        return 0L;
+    private String calculatePercent(long price, long payment){
+        return String.format("%.1f", (((double)price / (double)payment) * 100));
     }
 }

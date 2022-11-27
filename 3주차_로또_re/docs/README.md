@@ -24,7 +24,7 @@
 1. validate
    1. isNotNumber : ','으로 split한 배열이 숫자로 이루어진게 아닐 경우 참을 반환한다. 
    2. inputNotNumberException : 예외처리 출력문과 IllegalArgumentException을 throw한다. 
-   3. convertToLottoNumbers : 정수형 리스트로 바꾸어 준다. 
+   3. calculatePercent : 백분율을 소수점 첫째자리까지 구해준다.  
 
 ## Enum
 ### GameResult
