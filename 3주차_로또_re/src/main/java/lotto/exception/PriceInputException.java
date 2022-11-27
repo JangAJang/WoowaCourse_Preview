@@ -11,4 +11,8 @@ public class PriceInputException {
     private boolean isNotNumber(String input){
         return !Pattern.matches("^[0-9]*$", input);
     }
+
+    private boolean isNotDividedByThousand(String input){
+        return Long.parseLong(input) % 1000 != 0 || Long.parseLong(input) / 1000 ==0;
+    }
 }
