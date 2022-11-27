@@ -32,6 +32,7 @@ NOTHING(0, 0), THREE(3, 5,000), FOUR(4, 50,000), FIVE(5, 1,500,000)
 , FIVE_WITH_BONUS(5, 30,000,000), SIX(6, 2,000,000,000)를 가지며
 getCount로 괄호의 첫 번째 값을 int타입으로 반환한다. 
 getPrice로 괄호의 두 번째 값을 Long타입으로 반환한다.
+getComment로 출력문을 반환받을 수 있다. 
 
 ## Domain
 ### Lotto
