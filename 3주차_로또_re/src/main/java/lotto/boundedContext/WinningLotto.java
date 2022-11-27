@@ -1,12 +1,17 @@
 package lotto.boundedContext;
+import lotto.domain.BonusNumber;
 import lotto.domain.Lotto;
 import lotto.enums.GameResult;
 
 
 public class WinningLotto {
 
-    public WinningLotto(Lotto lotto, String input){
+    private final Lotto lotto;
+    private final BonusNumber bonusNumber;
 
+    public WinningLotto(Lotto lotto, String input){
+        this.lotto = lotto;
+        bonusNumber = new BonusNumber(lotto, input);
     }
 
     public GameResult makeResultOfLotto(Lotto lotto){
