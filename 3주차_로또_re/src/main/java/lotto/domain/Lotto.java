@@ -18,7 +18,7 @@ public class Lotto {
     }
 
     public boolean containsBonusNumber(int number){
-        return false;
+        return numbers.contains(number);
     }
 
     public int matchWithPlayerLotto(List<Integer> playerNumbers){
