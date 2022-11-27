@@ -27,6 +27,10 @@ public class Player {
     }
 
     public List<List<Integer>> getPlayerLottoNumbers(){
-        return new ArrayList<>();
+        List<List<Integer>> playerNumbers = new ArrayList<>();
+        for(Lotto lottoEach: playerLotto){
+            playerNumbers.add(lottoEach.getNumbers());
+        }
+        return playerNumbers;
     }
 }
