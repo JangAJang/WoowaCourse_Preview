@@ -3,7 +3,7 @@ import lotto.domain.BonusNumber;
 import lotto.domain.Lotto;
 import lotto.enums.GameResult;
 
-import static lotto.enums.GameResult.FIVE;
+import static lotto.enums.GameResult.*;
 
 
 public class WinningLotto {
@@ -18,7 +18,11 @@ public class WinningLotto {
 
     public GameResult makeResultOfLotto(Lotto lotto){
         int resultCount = countMatches(lotto);
+        if(resultCount == SIX.getCount()) return SIX;
         if(isFive(resultCount)) return makeFromFive(lotto);
+        if(resultCount == FOUR.getCount()) return FOUR;
+        if(resultCount == THREE.getCount()) return THREE;
+        return NOTHING;
     }
 
     private int countMatches(Lotto lotto){
