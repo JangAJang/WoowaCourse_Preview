@@ -1,5 +1,6 @@
 package lotto.controller;
 
+import lotto.exception.LottoInputException;
 import lotto.model.LottoGame;
 import lotto.view.InputView;
 import lotto.view.OutputView;
@@ -11,7 +12,7 @@ public class LottoGameController {
     private final OutputView outputView = new OutputView();
 
     public LottoGameController(){
-        lottoGame = new LottoGame(Long.parseLong(inputView.readPayment()));
+        lottoGame = new LottoGame(inputView.readPayment());
     }
 
     public void run(){
@@ -23,7 +24,7 @@ public class LottoGameController {
     }
 
     private void generateWinningLotto(){
-
+        lottoGame.createWinningLotto(inputView.readWinningNumbers(), inputView.readBonusNumber());
     }
 
     private void showResultOfGame(){

@@ -1,6 +1,10 @@
 package lotto.view;
 
 import camp.nextstep.edu.missionutils.Console;
+import lotto.exception.LottoInputException;
+import lotto.exception.PriceInputException;
+
+import java.util.List;
 
 public class InputView {
 
@@ -13,15 +17,17 @@ public class InputView {
         return Console.readLine();
     }
 
-    public String readPayment(){
-        return readInput(REQUEST_PAYMENT);
+    public long readPayment(){
+        PriceInputException priceInputException = new PriceInputException();
+        return priceInputException.validate(readInput(REQUEST_PAYMENT));
     }
 
-    public String readWinningNumbers(){
-        return readInput(REQUEST_WINNING);
+    public List<Integer> readWinningNumbers(){
+        LottoInputException lottoInputException = new LottoInputException();
+        return lottoInputException.validate(readInput(REQUEST_WINNING));
     }
 
     public String readBonusNumber(){
-       return readInput(REQUEST_BONUS);
+       return (readInput(REQUEST_BONUS));
     }
 }
