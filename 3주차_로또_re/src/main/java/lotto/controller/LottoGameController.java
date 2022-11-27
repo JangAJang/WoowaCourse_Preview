@@ -19,7 +19,7 @@ public class LottoGameController {
     }
 
     private void showPlayerNumbers(){
-
+        outputView.printPlayerNumber(lottoGame.showPlayerNumbers());
     }
 
     private void generateWinningLotto(){
