@@ -1,11 +1,17 @@
 package lotto.view;
 
+import lotto.enums.GameResult;
+
+import java.util.HashMap;
 import java.util.List;
+
+import static lotto.enums.GameResult.*;
 
 public class OutputView {
 
     private static final String STARTER = "당첨통계\n---";
     private static final String BOUGHT_COUNT = "개를 구매했습니다.";
+    private static final String DOG = "개";
 
     public void printStart(){
         System.out.println(STARTER);
@@ -18,8 +24,12 @@ public class OutputView {
         }
     }
 
-    public void printResult(){
-
+    public void printResult(HashMap<GameResult, Integer> statistics){
+        System.out.println(THREE.getComment() + statistics.get(THREE) + DOG);
+        System.out.println(FOUR.getComment() + statistics.get(FOUR) + DOG);
+        System.out.println(FIVE.getComment() + statistics.get(FIVE) + DOG);
+        System.out.println(FIVE_WITH_BONUS.getComment() + statistics.get(FIVE_WITH_BONUS) + DOG);
+        System.out.println(SIX.getComment() + statistics.get(SIX) + DOG);
     }
 
     public void printProfit(){
