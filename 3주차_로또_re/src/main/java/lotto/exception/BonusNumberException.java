@@ -2,6 +2,8 @@ package lotto.exception;
 
 import lotto.domain.Lotto;
 
+import java.util.regex.Pattern;
+
 public class BonusNumberException {
 
     public int validate(String bonusNumber, Lotto lotto){
@@ -9,7 +11,7 @@ public class BonusNumberException {
     }
 
     private boolean isNotNumber(String bonusNumber){
-        return false;
+        return !Pattern.matches("^[0-9]*$", bonusNumber);
     }
 
     private boolean isAlreadyInLotto(String bonusNumber, Lotto lotto){
