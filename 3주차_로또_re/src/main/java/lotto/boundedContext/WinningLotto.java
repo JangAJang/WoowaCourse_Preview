@@ -19,7 +19,7 @@ public class WinningLotto {
     }
 
     private int countMatches(Lotto lotto){
-        return 0;
+        return this.lotto.matchWithPlayerLotto(lotto.getNumbers());
     }
 
     private boolean isFive(int count){
