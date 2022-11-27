@@ -61,6 +61,7 @@ getPrice로 괄호의 두 번째 값을 Long타입으로 반환한다.
    1. countMatches : 인스턴스의 Lotto.matchWithPlayerLotto에 입력변수 로또의 정수형 리스트를 넣어 반환한다. 
    2. isFive : 입력변수가 5일 경우 참을 반환
    3. containsBonusNumber : BonusNumber.isHavingBonusNumber에 정수형 리스트를 넣어 반환한다.
+   4. makeFromFive : 로또가 보너스가 있으면 FIVE_WITH_BONUS, 아니면 FIVE를 반환한다. 
 
 ### Player
 1. 생성자 : int형 변수를 입력받아 List<Lotto>를 생성한다. 사이즈가 변수와 같아질 때 까지 Randoms로 로또를 만들어준다. 

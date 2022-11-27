@@ -3,6 +3,8 @@ import lotto.domain.BonusNumber;
 import lotto.domain.Lotto;
 import lotto.enums.GameResult;
 
+import static lotto.enums.GameResult.FIVE;
+
 
 public class WinningLotto {
 
@@ -15,7 +17,8 @@ public class WinningLotto {
     }
 
     public GameResult makeResultOfLotto(Lotto lotto){
-        return GameResult.SIX;
+        int resultCount = countMatches(lotto);
+        if(isFive(resultCount)) return makeFromFive(lotto);
     }
 
     private int countMatches(Lotto lotto){
@@ -23,10 +26,15 @@ public class WinningLotto {
     }
 
     private boolean isFive(int count){
-        return false;
+        return count == 5;
+    }
+
+    private GameResult makeFromFive(Lotto lotto){
+        if(containsBonusNumber(lotto)) return GameResult.FIVE_WITH_BONUS;
+        return FIVE;
     }
 
     private boolean containsBonusNumber(Lotto lotto){
-        return false;
+        return bonusNumber.isHavingBonusNumber(lotto.getNumbers());
     }
 }
