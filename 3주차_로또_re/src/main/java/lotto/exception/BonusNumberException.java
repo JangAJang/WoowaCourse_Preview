@@ -8,8 +8,11 @@ public class BonusNumberException {
 
     private static final int MAXIMUM_NUMBER = 45;
     private static final int MINIMUM_NUMBER = 1;
+    private static final String NOT_RIGHT_BONUS_NUMBER_COMMENT = "[ERROR] 보너스 넘버는 1부터 45중 당첨번호에 등록되지 않은 번호여야 합니다. ";
 
     public int validate(String bonusNumber, Lotto lotto){
+        if(isNotNumber(bonusNumber) || isOutOfRange(bonusNumber) || isAlreadyInLotto(bonusNumber, lotto))
+            notRightBonusNumberException();
         return Integer.parseInt(bonusNumber);
     }
 
@@ -26,6 +29,7 @@ public class BonusNumberException {
     }
 
     private void notRightBonusNumberException(){
-
+        System.out.println(NOT_RIGHT_BONUS_NUMBER_COMMENT);
+        throw new IllegalArgumentException();
     }
 }
