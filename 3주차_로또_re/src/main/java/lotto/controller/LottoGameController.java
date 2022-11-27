@@ -6,12 +6,12 @@ import lotto.view.OutputView;
 
 public class LottoGameController {
 
-    private final LottoGame lottoGame = new LottoGame(1000L);
+    private final LottoGame lottoGame;
     private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
 
     public LottoGameController(){
-
+        lottoGame = new LottoGame(Long.parseLong(inputView.readPayment()));
     }
 
     public void run(){
