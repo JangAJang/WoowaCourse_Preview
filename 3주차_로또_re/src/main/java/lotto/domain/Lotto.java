@@ -1,6 +1,7 @@
 package lotto.domain;
 
 import lotto.enums.GameResult;
+import lotto.exception.LottoException;
 
 import java.util.List;
 
@@ -8,11 +9,12 @@ public class Lotto {
     private final List<Integer> numbers;
 
     public Lotto(List<Integer> numbers) {
-        validate(numbers);
-        this.numbers = numbers;
+        this.numbers = validate(numbers);
     }
 
-    private void validate(List<Integer> numbers) {
+    private List<Integer> validate(List<Integer> numbers) {
+        LottoException lottoException = new LottoException();
+        return lottoException.validate(numbers);
     }
 
     public boolean containsBonusNumber(int number){
