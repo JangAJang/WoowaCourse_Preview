@@ -1,4 +1,4 @@
-# 기능 목록
+# 기능 목록 (실행 완료까지 3시간 30분 2초)
 
 ## Exception
 ### LottoException
