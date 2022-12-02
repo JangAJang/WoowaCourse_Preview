@@ -42,4 +42,9 @@ public class BridgeGameController {
     private void retryGame(){
         if(isRunning()) bridgeGame.retry();
     }
+
+    private void concludeGame(){
+        outputView.printFinalMap(bridgeGame.makePlayerAnswerBridge());
+        outputView.printResult(bridgeGame.isGameResultQuit(), bridgeGame.getTrialCount());
+    }
 }
