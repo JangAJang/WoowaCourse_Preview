@@ -16,7 +16,7 @@ public class Player {
     }
 
     public boolean isFailedGame(){
-        return false;
+        return playerAnswers.contains(false);
     }
 
     public boolean isFinished(int size){
