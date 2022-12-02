@@ -7,7 +7,7 @@ public class Bridge {
     private List<String> bridges;
 
     public Bridge(List<String> bridges){
-
+        this.bridges = bridges;
     }
 
     public List<String> getBridges(){
