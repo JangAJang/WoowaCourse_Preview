@@ -52,6 +52,6 @@ public class BridgeGame {
     }
 
     public int getTrialCount(){
-        return 0;
+        return gameResult.getTrialCount();
     }
 }
