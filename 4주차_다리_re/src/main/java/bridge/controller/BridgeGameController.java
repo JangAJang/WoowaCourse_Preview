@@ -24,5 +24,7 @@ public class BridgeGameController {
         return !(bridgeGame.isAllCorrect() || bridgeGame.isGameResultQuit())
     }
 
-
+    private boolean isStopMoment(){
+        return bridgeGame.isAllCorrect() || bridgeGame.containsWrongAnswer();
+    }
 }
