@@ -107,8 +107,7 @@ getElement로 속성값을 가져온다.
       1. BrigdeGame.makePlayerAnswerBridge을 OutputView.printFinalResult해준다. 
       2. BridgeGame.getTrialCount의 값을 printGameTrials해준다. 
    5. changeGameStatusIfRunning : 만약 isRunning이 참이면 입력을 받아 GameStatus를 바꾼다.  
-      1. isInputQuit : InputView.readGameRetrialChoice가 QUIT.getCommand와 같으면 참을 반환한다. 
-      2. bridgeGame.quitGame을 실행해준다. 
+      1. checkRetrialInput : InputView.readGameRetrialChoice가 QUIT.getCommand와 같으면 bridgeGame.quitGame을 실행해준다. 
 
 runGame 구조
 while(!isRunning){

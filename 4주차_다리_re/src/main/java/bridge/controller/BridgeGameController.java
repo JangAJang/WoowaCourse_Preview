@@ -4,6 +4,8 @@ import bridge.BridgeGame;
 import bridge.view.InputView;
 import bridge.view.OutputView;
 
+import static bridge.enums.GameStatus.QUIT;
+
 public class BridgeGameController {
 
     private final OutputView outputView = new OutputView();
@@ -46,5 +48,14 @@ public class BridgeGameController {
     private void concludeGame(){
         outputView.printFinalMap(bridgeGame.makePlayerAnswerBridge());
         outputView.printResult(bridgeGame.isGameResultQuit(), bridgeGame.getTrialCount());
+    }
+
+    private void changeGameStatusIfRunning(){
+        if(isRunning()) checkRetrialInput();
+    }
+
+    private void checkRetrialInput(){
+        if(inputView.readGameCommand().equals(QUIT.getCommand()))
+            bridgeGame.quitGame();
     }
 }
