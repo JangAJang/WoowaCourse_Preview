@@ -34,7 +34,7 @@ public class BridgeGame {
     }
 
     public boolean containsWrongAnswer(){
-        return false;
+        return player.isFailedGame();
     }
 
     public boolean isGameResultQuit(){
