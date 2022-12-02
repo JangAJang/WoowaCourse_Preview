@@ -13,4 +13,16 @@ public class BridgeGameController {
     public BridgeGameController(){
         bridgeGame = new BridgeGame(inputView.readBridgeSize());
     }
+
+    public void runGame(){
+        while(isRunning()){
+
+        }
+    }
+
+    private boolean isRunning(){
+        return !(bridgeGame.isAllCorrect() || bridgeGame.isGameResultQuit())
+    }
+
+
 }
