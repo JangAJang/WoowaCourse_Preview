@@ -13,7 +13,7 @@ public class BridgeGame {
     private final Player player = new Player();
     private Bridge bridge;
     private final GameResult gameResult = new GameResult();
-    private final BridgeConstructor bridgeConstructor= new BridgeConstructor;
+    private final BridgeConstructor bridgeConstructor= new BridgeConstructor();
 
     public BridgeGame(int size){
         BridgeMaker bridgeMaker = new BridgeMaker(new BridgeRandomNumberGenerator());
