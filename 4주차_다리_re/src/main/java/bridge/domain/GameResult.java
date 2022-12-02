@@ -20,7 +20,7 @@ public class GameResult {
     }
 
     public boolean isQuit(){
-        return false;
+        return gameStatus.equals(GameStatus.QUIT);
     }
 
     public int getTrialCount(){
