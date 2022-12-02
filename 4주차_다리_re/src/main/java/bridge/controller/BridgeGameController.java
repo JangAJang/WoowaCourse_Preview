@@ -21,7 +21,7 @@ public class BridgeGameController {
     }
 
     private boolean isRunning(){
-        return !(bridgeGame.isAllCorrect() || bridgeGame.isGameResultQuit())
+        return !(bridgeGame.isAllCorrect() || bridgeGame.isGameResultQuit());
     }
 
     private boolean isStopMoment(){
@@ -31,5 +31,11 @@ public class BridgeGameController {
     private void movePlayer(){
         bridgeGame.move(inputView.readGameCommand());
         outputView.printMap(bridgeGame.makePlayerAnswerBridge());
+    }
+
+    private void moveUntilStopMoment(){
+        while(!isStopMoment()){
+            movePlayer();
+        }
     }
 }
