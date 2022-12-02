@@ -30,4 +30,8 @@ public class Player {
     public void clearAnswers(){
         playerAnswers.clear();
     }
+
+    public int getAnswersCount(){
+        return playerAnswers.size();
+    }
 }

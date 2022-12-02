@@ -3,7 +3,8 @@
 ### Bridge
 1. 생성자 : List<String>을 입력받아 인스턴스를 초기화한다. 
 2. getBridges : List<String>을 반환한다.
-3. isCorrectAnswer : Player.getPlayerAnswers의 길이와 문자열을 입력받아 인덱스의 인스턴스 원소가 입력변수와 같으면 참을 반환한다. 
+3. isCorrectAnswer : Player.getPlayerAnswers의 길이와 문자열을 입력받아 인덱스의 인스턴스 원소가 입력변수와 같으면 참을 반환한다.
+4. getBridgesLength : bridge의 길이를 반환한다.
 
 ### Player
 1. 생성자 : List<boolean>타입 인스턴스를 초기화시킨다. 
@@ -12,6 +13,7 @@
 4. isFinished : Bridge의 리스트 길이를 입력받아, 인스턴스의 길이와 같고 인스턴스가 모두 true이면 참을 반환한다.
 5. getPlayerAnswers : List<boolean>타입의 인스턴스를 반환한다.
 6. clearAnswer : List<boolean>을 초기화시킨다. 
+7. getAnswersCount : 리스트의 길이를 반환한다. 
    
 
 ### GameResult

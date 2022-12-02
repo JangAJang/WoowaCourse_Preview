@@ -22,8 +22,7 @@ public class BridgeGame {
 
     public void move(String input) {
         player.addPlayerAnswer(bridge
-                .isCorrectAnswer(player.
-                        getPlayerAnswers().size(), input));
+                .isCorrectAnswer(player.getAnswersCount(), input));
     }
     public void retry() {
         player.clearAnswers();
@@ -31,7 +30,7 @@ public class BridgeGame {
     }
 
     public boolean isAllCorrect(){
-        return false;
+        return player.isFinished(bridge.getBridgesLength());
     }
 
     public boolean containsWrongAnswer(){
