@@ -26,6 +26,8 @@ public class BridgeGame {
                         getPlayerAnswers().size(), input));
     }
     public void retry() {
+        player.clearAnswers();
+        gameResult.resetGame();
     }
 
     public boolean isAllCorrect(){
