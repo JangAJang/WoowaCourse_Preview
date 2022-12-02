@@ -73,7 +73,7 @@ getElement로 속성값을 가져온다.
 2. validateBridgeChoice : 입력변수를 확인하고 문자열로 반환한다.
      1. isNotU : UPPER.getCommand가 아니면 참을 반환한다. 
     2. isNotD : DOWN.getCommand가 아니면 참을 반환한다. 
-    3. throwLengthException : '[ERROR] 다리는 위는 U, 아래는 D로만 입력해주셔야 합니다.'를 출력하고 IllegalArgumentException을 던진다.
+    3. throwChoiceException : '[ERROR] 다리는 위는 U, 아래는 D로만 입력해주셔야 합니다.'를 출력하고 IllegalArgumentException을 던진다.
 3. validateGameRetrialChoice : 입력변수를 확인하고 문자열로 반환한다.
      1. isNotRetry : GOING.getCommand가 아니면 참을 반환한다. 
     2. isNotQuit : QUIT.getCommand가 아니면 참을 반환한다. 
