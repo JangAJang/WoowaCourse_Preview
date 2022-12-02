@@ -42,7 +42,7 @@ public class BridgeGame {
     }
 
     public void quitGame(){
-
+        gameResult.failGame();
     }
 
     public String makePlayerAnswerBridge(){
