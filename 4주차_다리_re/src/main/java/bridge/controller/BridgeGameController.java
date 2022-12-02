@@ -8,57 +8,49 @@ import static bridge.enums.GameStatus.QUIT;
 
 public class BridgeGameController {
 
-    private final OutputView outputView = new OutputView();
     private final InputView inputView = new InputView();
+    private final OutputView outputView = new OutputView();
     private final BridgeGame bridgeGame;
 
     public BridgeGameController(){
         bridgeGame = new BridgeGame(inputView.readBridgeSize());
     }
 
-    public void runGame(){
-        while(isRunning()){
-            tryGame();
-            moveUntilStopMoment();
-            changeGameStatusIfRunning();
-        }
-        concludeGame();
-    }
-
-    private boolean isRunning(){
-        return !(bridgeGame.isAllCorrect() || bridgeGame.isGameResultQuit());
-    }
-
-    private boolean isStopMoment(){
-        return bridgeGame.isAllCorrect() || bridgeGame.containsWrongAnswer();
-    }
-
-    private void movePlayer(){
-        bridgeGame.move(inputView.readGameCommand());
+    private void moveAStep(){
+        bridgeGame.move(inputView.readMoving());
         outputView.printMap(bridgeGame.makePlayerAnswerBridge());
     }
 
-    private void moveUntilStopMoment(){
-        while(!isStopMoment()){
-            movePlayer();
-        }
-    }
-
-    private void tryGame(){
-        if(isRunning()) bridgeGame.retry();
+    private void resetGame(){
+        bridgeGame.retry();
     }
 
     private void concludeGame(){
         outputView.printFinalMap(bridgeGame.makePlayerAnswerBridge());
-        outputView.printResult(bridgeGame.isGameResultQuit(), bridgeGame.getTrialCount());
+        outputView.printResult(!bridgeGame.isAllCorrect(), bridgeGame.getTrialCount());
     }
 
-    private void changeGameStatusIfRunning(){
-        if(isRunning()) checkRetrialInput();
+    public void runGame(){
+        while(true){
+            moveUntilStop();
+            if(bridgeGame.isAllCorrect()) break;
+            if(isQuit()) break;
+            resetGame();
+        }
+        concludeGame();
     }
 
-    private void checkRetrialInput(){
-        if(inputView.readGameCommand().equals(QUIT.getCommand()))
-            bridgeGame.quitGame();
+    private boolean isQuit(){
+        return readFinalCommand().equals(QUIT.getCommand());
+    }
+
+    private void moveUntilStop(){
+        while(!(bridgeGame.isAllCorrect()) || bridgeGame.containsWrongAnswer()){
+            moveAStep();
+        }
+    }
+
+    private String readFinalCommand(){
+        return inputView.readGameCommand();
     }
 }
