@@ -16,7 +16,7 @@ public class GameResult {
     }
 
     public void failGame(){
-
+        gameStatus = GameStatus.QUIT;
     }
 
     public boolean isQuit(){
