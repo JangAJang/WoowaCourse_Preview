@@ -1,0 +1,20 @@
+package bridge.domain;
+
+import java.util.List;
+
+public class Bridge {
+
+    private List<String> bridges;
+
+    public Bridge(List<String> bridges){
+
+    }
+
+    public List<String> getBridges(){
+        return bridges;
+    }
+
+    public boolean isCorrectAnswer(int index, String answer){
+        return false;
+    }
+}

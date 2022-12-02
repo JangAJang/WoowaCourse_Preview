@@ -79,15 +79,16 @@ getElement로 속성값을 가져온다.
 ## View
 ### InputView
 1. readInput : 문자열을 입력받아 이를 출력하고 Console.readLine을 반환해준다.
-2. readLength :  scanLength : '다리의 길이를 입력해주세요.'를 입력변수로 readInput한 값을 InputValidator.validateLength로 반환해준다. 
-3. readBridgeChoice : '이동할 칸을 선택해주세요. (위: U, 아래: D)'를 입력변수로 readInput한 값을 InputValidator.validateBridgeChoice로 반환해준다. 
-4. readGameRetrialChoice : '게임을 다시 시도할지 여부를 입력해주세요. (재시도: R, 종료: Q)'를 입력변수로 readInput한 값을 InputValidator.validateGameRetrialChoice로 반환해준다. 
+2. readBridgeSize :  scanLength : '다리의 길이를 입력해주세요.'를 입력변수로 readInput한 값을 InputValidator.validateLength로 반환해준다. 
+3. readMoving : '이동할 칸을 선택해주세요. (위: U, 아래: D)'를 입력변수로 readInput한 값을 InputValidator.validateBridgeChoice로 반환해준다. 
+4. readGameCommand : '게임을 다시 시도할지 여부를 입력해주세요. (재시도: R, 종료: Q)'를 입력변수로 readInput한 값을 InputValidator.validateGameRetrialChoice로 반환해준다. 
 
 ### OutputView
-1. printPlayerChoices : 입력받은 BridgeConstructor.constructBridges의 값을 출력한다. 
-2. printFinalResult : '최종 게임 결과'를 출력하고 printPlayerChoices를 출력해준다. 
-3. printGameStatus : '게임 성공 여부: '와 boolean타입의 입력변수가 참이면 '실패'를 출력해준다. 
-4. printGameTrials : '총 시도한 횟수: '와 정수형 입력변수를 출력해준다. 
+1. printMap : 입력받은 BridgeConstructor.constructBridges의 값을 출력한다. 
+2. printFinalMap : '최종 게임 결과'를 출력하고 printPlayerChoices를 출력해준다. 
+3. printResult : boolean타입과 int타입의 변수를 받아 최종 결과를 출력한다. 
+   1. printGameStatus : '게임 성공 여부: '와 boolean타입의 입력변수가 참이면 '실패'를 출력해준다. 
+   2. printGameTrials : '총 시도한 횟수: '와 정수형 입력변수를 출력해준다. 
 
 ## Controller
 ### BridgeGameController

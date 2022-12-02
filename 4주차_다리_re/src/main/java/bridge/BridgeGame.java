@@ -20,4 +20,28 @@ public class BridgeGame {
      */
     public void retry() {
     }
+
+    public boolean isAllCorrect(){
+        return false;
+    }
+
+    public boolean containsWrongAnswer(){
+        return false;
+    }
+
+    public boolean isGameResultQuit(){
+        return false;
+    }
+
+    public void quitGame(){
+
+    }
+
+    public String makePlayerAnswerBridge(){
+        return null;
+    }
+
+    public int getTrialCount(){
+        return 0;
+    }
 }
