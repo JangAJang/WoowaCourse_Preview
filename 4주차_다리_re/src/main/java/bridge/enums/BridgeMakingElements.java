@@ -6,7 +6,7 @@ public enum BridgeMakingElements {
     FINISHER("]"),
     CORRECT("O "),
     WRONG("X "),
-    EMPTY(" "),
+    EMPTY("  "),
     DIVIDER("| ");
 
     private String element;

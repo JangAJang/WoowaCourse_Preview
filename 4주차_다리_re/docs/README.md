@@ -28,6 +28,8 @@
    2. constructEachBridge : 한 인덱스의 다리와 플레이어 정답여부를 입력받아 정답을 반환한다. 
       1. constructRightBridge
          1. isUpperBridge : Bridge에서 가져온 다리가 'U'이면 참을 반환한다.
+         2. writeUpperToAnswer : boolean타입을 가져와 원래 답이 위쪽일 때, 입력변수로 답을 맞출 때, 틀릴때를 구분해 결과를 빌더에 추가한다. 
+         3. writeDOWNToAnswer : boolean타입을 가져와 원래 답이 아래쪽일 때, 입력변수로 답을 맞출때, 틀릴 때를 구분해 빌더에 답을 추가한다. 
 
 ## enum
 ### BridgeStatus

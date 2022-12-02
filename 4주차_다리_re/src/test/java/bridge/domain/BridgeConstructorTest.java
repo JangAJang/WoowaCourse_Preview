@@ -15,6 +15,6 @@ public class BridgeConstructorTest {
         List<String> bridge = List.of("U", "D", "U");
         List<Boolean> answers = List.of(true, true, true);
         assertThat(bridgeConstructor.constructBridges(bridge, answers))
-                .isEqualTo("[ O | O | O ]\n[   |   |   ]");
+                .isEqualTo("[ O |   | O ]\n[   | O |   ]");
     }
 }
