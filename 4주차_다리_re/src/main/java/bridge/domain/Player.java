@@ -20,7 +20,7 @@ public class Player {
     }
 
     public boolean isFinished(int size){
-        return false;
+        return !isFailedGame() && playerAnswers.size() == size;
     }
 
     public List<Boolean> getPlayerAnswers(){
