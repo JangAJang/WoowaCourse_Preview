@@ -24,7 +24,7 @@ public class GameResult {
     }
 
     public int getTrialCount(){
-        return 0;
+        return trialCount;
     }
 
 }
