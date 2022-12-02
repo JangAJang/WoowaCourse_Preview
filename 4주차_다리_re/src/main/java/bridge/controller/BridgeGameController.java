@@ -27,4 +27,9 @@ public class BridgeGameController {
     private boolean isStopMoment(){
         return bridgeGame.isAllCorrect() || bridgeGame.containsWrongAnswer();
     }
+
+    private void movePlayer(){
+        bridgeGame.move(inputView.readGameCommand());
+        outputView.printMap(bridgeGame.makePlayerAnswerBridge());
+    }
 }

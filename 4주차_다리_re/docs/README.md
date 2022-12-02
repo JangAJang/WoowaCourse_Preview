@@ -100,8 +100,7 @@ getElement로 속성값을 가져온다.
 2. runGame : 다 맞추거나 게임을 끝내길 원할 때 까지 게임을 반복시키고, 끝날 때 최종 결과를 출력해준다. 
    1. moveUntilStopMoment : 다리 길이만큼 다 맞추거나 틀리는 답이 존재할때 까지 BridgeGame.move해준다. 
       1. isStopMoment : BridgeGame.isAllCorrect || BridgeGame.containsWrongAnswer를 반환한다. 
-      2. movePlayer : InputView.readBridgeChoice의 결과로 BridgeGame.move해준다. 
-      3. printPlayerMovement : OutputView.printPlayerChoices로 BridgeGame.makePlayerAnswerBridge의 결과를 출력해준다. 
+      2. movePlayer : InputView.readBridgeChoice의 결과로 BridgeGame.move해준다. OutputView.printPlayerChoices로 BridgeGame.makePlayerAnswerBridge의 결과를 출력해준다. 
    2. retryGame : isRunning이라면 BridgeGame.retry해준다. 
    3. isRunning : BridgeGame.isAllCorrect || BridgeGame.isGameResultQuit의 역을 반환한다. 
    4. concludeGame 
