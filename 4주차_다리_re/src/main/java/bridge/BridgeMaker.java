@@ -2,6 +2,7 @@ package bridge;
 
 import java.util.List;
 
+import static bridge.enums.BridgeStatus.DOWN;
 import static bridge.enums.BridgeStatus.UPPER;
 
 /**
@@ -25,5 +26,10 @@ public class BridgeMaker {
 
     private boolean isUpperBridge(int value){
         return value == UPPER.getValue();
+    }
+
+    private String makeEachBridge(){
+        if(isUpperBridge(bridgeNumberGenerator.generate())) return UPPER.getCommand();
+        return DOWN.getCommand();
     }
 }
