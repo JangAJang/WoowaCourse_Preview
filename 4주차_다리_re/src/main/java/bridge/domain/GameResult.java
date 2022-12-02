@@ -12,7 +12,7 @@ public class GameResult {
     }
 
     public void resetGame(){
-
+        trialCount++;
     }
 
     public void failGame(){
