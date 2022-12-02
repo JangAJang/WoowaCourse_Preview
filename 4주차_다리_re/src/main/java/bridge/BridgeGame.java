@@ -38,7 +38,7 @@ public class BridgeGame {
     }
 
     public boolean isGameResultQuit(){
-        return false;
+        return gameResult.isQuit();
     }
 
     public void quitGame(){
