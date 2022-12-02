@@ -2,6 +2,8 @@ package bridge;
 
 import java.util.List;
 
+import static bridge.enums.BridgeStatus.UPPER;
+
 /**
  * 다리의 길이를 입력 받아서 다리를 생성해주는 역할을 한다.
  */
@@ -19,5 +21,9 @@ public class BridgeMaker {
      */
     public List<String> makeBridge(int size) {
         return null;
+    }
+
+    private boolean isUpperBridge(int value){
+        return value == UPPER.getValue();
     }
 }
