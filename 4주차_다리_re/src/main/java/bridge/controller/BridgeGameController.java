@@ -38,4 +38,8 @@ public class BridgeGameController {
             movePlayer();
         }
     }
+
+    private void retryGame(){
+        if(isRunning()) bridgeGame.retry();
+    }
 }
