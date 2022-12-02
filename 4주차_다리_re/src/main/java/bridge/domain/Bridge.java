@@ -15,6 +15,6 @@ public class Bridge {
     }
 
     public boolean isCorrectAnswer(int index, String answer){
-        return false;
+        return bridges.get(index).equals(answer);
     }
 }
