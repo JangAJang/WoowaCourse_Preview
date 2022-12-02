@@ -18,8 +18,11 @@ public class BridgeGameController {
 
     public void runGame(){
         while(isRunning()){
-
+            tryGame();
+            moveUntilStopMoment();
+            changeGameStatusIfRunning();
         }
+        concludeGame();
     }
 
     private boolean isRunning(){
@@ -41,7 +44,7 @@ public class BridgeGameController {
         }
     }
 
-    private void retryGame(){
+    private void tryGame(){
         if(isRunning()) bridgeGame.retry();
     }
 

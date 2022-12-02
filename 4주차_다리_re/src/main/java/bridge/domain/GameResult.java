@@ -7,7 +7,7 @@ public class GameResult {
     private GameStatus gameStatus;
 
     public GameResult(){
-        trialCount = 1;
+        trialCount = `;
         gameStatus = GameStatus.GOING;
     }
 
