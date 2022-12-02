@@ -46,7 +46,9 @@ public class BridgeGame {
     }
 
     public String makePlayerAnswerBridge(){
-        return null;
+        return bridgeConstructor
+                .constructBridges(bridge.getBridges()
+                        , player.getPlayerAnswers());
     }
 
     public int getTrialCount(){
