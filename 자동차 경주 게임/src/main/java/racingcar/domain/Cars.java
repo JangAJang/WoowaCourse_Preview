@@ -18,9 +18,7 @@ public class Cars {
 
     public List<String> getCarsResult(){
         List<String> results = new ArrayList<>();
-        for(Car carEach : cars){
-            results.add(carEach.makeResult());
-        }
+        cars.forEach(car -> results.add(car.makeResult()));
         return results;
     }
 
@@ -28,9 +26,12 @@ public class Cars {
         return new ArrayList<>();
     }
 
+    private int getBiggestPosition(){
+        return cars.stream().mapToInt(Car::getPosition).max().orElse(0);
+    }
+
     public void moveCars(){
-        for(Car carEach : cars){
-            carEach.move(Randoms.pickNumberInRange(LEAST_NUMBER, MAX_NUMBER));
-        }
+        cars.forEach(car -> car.move(Randoms
+                .pickNumberInRange(LEAST_NUMBER, MAX_NUMBER)));
     }
 }
