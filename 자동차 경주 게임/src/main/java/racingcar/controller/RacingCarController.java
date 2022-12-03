@@ -17,4 +17,8 @@ public class RacingCarController {
     private int readCarsMovingTime(){
         return inputView.readTrials();
     }
+
+    private void startMakingResult(){
+        outputView.printStartOfResult();
+    }
 }
