@@ -14,6 +14,12 @@ public class RacingCarController {
         cars = new Cars(inputView.readNames());
     }
 
+    private void startGame(){
+        int trialCount = readCarsMovingTime();
+        startMakingResult();
+        moveCars(trialCount);
+    }
+
     private int readCarsMovingTime(){
         return inputView.readTrials();
     }
