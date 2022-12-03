@@ -9,6 +9,7 @@ public class InputValidator {
 
     private static final int LENGTH_LIMIT = 5;
     private static final String NAME_TOO_LONG_EXCEPTION = "[ERROR] 이름은 5글자 이내여야 합니다.";
+    private static final String TRIAL_NOT_NUMBER_EXCEPTION = "[ERROR] 시도 횟수는 숫자로 입력해야 합니다.";
 
     public List<String> validateNames(String input){
         List<String> names = separateNames(input);
@@ -37,5 +38,10 @@ public class InputValidator {
 
     private boolean isNotNumber(String input){
         return !Pattern.matches("^[0-9]*$", input);
+    }
+
+    private void notNumberException(){
+        System.out.println(TRIAL_NOT_NUMBER_EXCEPTION);
+        throw new IllegalArgumentException();
     }
 }
