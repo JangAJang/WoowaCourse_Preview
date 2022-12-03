@@ -28,4 +28,8 @@ public class RacingCarController {
             outputView.printCarsPositions(cars.getCarsResult());
         }
     }
+
+    private void showFinalWinners(){
+        outputView.printFinalWinners(cars.getFinalWinners());
+    }
 }
