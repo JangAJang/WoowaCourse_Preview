@@ -18,7 +18,7 @@ public class Car {
     }
 
     public String makeResult(){
-        return null;
+        return name + " : " + position;
     }
     public int getPosition(){
         return position;
