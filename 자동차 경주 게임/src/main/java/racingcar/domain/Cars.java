@@ -7,7 +7,9 @@ public class Cars {
     private final List<Car> cars = new ArrayList<>();
 
     public Cars(List<String> names){
-
+        for(String nameEach : names){
+            cars.add(new Car(nameEach));
+        }
     }
 
     public List<String> getCarsResult(){
