@@ -10,10 +10,10 @@ public class Car {
     }
 
     public void move(int value){
-
+        if(isAbleToMove(value)) position++;
     }
 
-    private void isAbleToMove(int value){
+    private boolean isAbleToMove(int value){
         return value >= MOVING_REQUIREMENT;
     }
 
