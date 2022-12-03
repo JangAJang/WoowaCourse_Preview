@@ -11,7 +11,10 @@ public class InputValidator {
 
     public List<String> validateNames(String input){
         List<String> names = separateNames(input);
-
+        for(String nameEach : names){
+            if(isEachNameTooLong(nameEach)) nameTooLongException();
+        }
+        return names;
     }
 
     private List<String> separateNames(String input){
