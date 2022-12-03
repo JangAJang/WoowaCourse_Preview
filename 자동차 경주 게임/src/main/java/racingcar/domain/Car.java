@@ -3,6 +3,7 @@ package racingcar.domain;
 public class Car {
     private final String name;
     private int position = 0;
+    private static final int MOVING_REQUIREMENT = 4;
 
     public Car(String name) {
         this.name = name;
@@ -10,6 +11,10 @@ public class Car {
 
     public void move(int value){
 
+    }
+
+    private void isAbleToMove(int value){
+        return value >= MOVING_REQUIREMENT;
     }
 
     public String makeResult(){

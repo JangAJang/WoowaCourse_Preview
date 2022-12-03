@@ -6,6 +6,7 @@
    1. isAbleTomove : 입력변수가 4보다 크거나 같으면 참을 반환한다. 
 3. makeResult : 이름 : -(position개수만큼)을 문자열로 만들어 반환한다. 
 4. getPosition : position을 반환한다. 
+5. getName : name을 반환한다. 
 
 ### Cars
 인스턴스로 List<Car>이 존재한다. 
