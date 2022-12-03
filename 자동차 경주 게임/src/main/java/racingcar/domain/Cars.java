@@ -13,7 +13,11 @@ public class Cars {
     }
 
     public List<String> getCarsResult(){
-        return new ArrayList<>();
+        List<String> results = new ArrayList<>();
+        for(Car carEach : cars){
+            results.add(carEach.makeResult());
+        }
+        return results;
     }
 
     public List<String> getFinalWinners(){
