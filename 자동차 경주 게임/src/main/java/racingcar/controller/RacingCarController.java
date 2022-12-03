@@ -21,4 +21,11 @@ public class RacingCarController {
     private void startMakingResult(){
         outputView.printStartOfResult();
     }
+
+    private void moveCars(int count){
+        while(count-- > 0){
+            cars.moveCars();
+            outputView.printCarsPositions(cars.getCarsResult());
+        }
+    }
 }
