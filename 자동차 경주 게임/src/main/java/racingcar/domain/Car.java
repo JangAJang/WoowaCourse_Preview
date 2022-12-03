@@ -18,11 +18,15 @@ public class Car {
     }
 
     public String makeResult(){
-        return name + " : " + position;
+        return name + " : " + makeResultPosition();
     }
 
     private String makeResultPosition(){
-        return "-".repeat(position);
+        StringBuilder dashBuilder = new StringBuilder();
+        for(int count = 0; count < position; count++){
+            dashBuilder.append("-");
+        }
+        return dashBuilder.toString();
     }
     public int getPosition(){
         return position;
