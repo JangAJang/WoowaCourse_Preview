@@ -17,6 +17,10 @@ public class InputView {
     }
 
     public List<String> readNames(){
-        return inputValidator.validateNames(readInput(REQUEST_NAMES));
+        return inputValidator.validateNames(scanNames());
+    }
+
+    private String scanNames(){
+        return readInput(REQUEST_NAMES);
     }
 }
