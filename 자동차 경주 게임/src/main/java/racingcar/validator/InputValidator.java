@@ -7,9 +7,11 @@ import java.util.stream.Collectors;
 public class InputValidator {
 
     private static final int LENGTH_LIMIT = 5;
+    private static final String NAME_TOO_LONG_EXCEPTION = "[ERROR] 이름은 5글자 이내여야 합니다.";
 
     public List<String> validateNames(String input){
         List<String> names = separateNames(input);
+
     }
 
     private List<String> separateNames(String input){
@@ -18,5 +20,10 @@ public class InputValidator {
 
     private boolean isEachNameTooLong(String name){
         return name.length() > LENGTH_LIMIT;
+    }
+
+    private void nameTooLongException(){
+        System.out.println(NAME_TOO_LONG_EXCEPTION);
+        throw new IllegalArgumentException();
     }
 }
