@@ -13,4 +13,8 @@ public class RacingCarController {
     public RacingCarController(){
         cars = new Cars(inputView.readNames());
     }
+
+    private int readCarsMovingTime(){
+        return inputView.readTrials();
+    }
 }
