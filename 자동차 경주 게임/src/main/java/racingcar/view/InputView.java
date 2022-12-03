@@ -32,4 +32,8 @@ public class InputView {
     private String scanTrials(){
         return readInput(REQUEST_TRIALS);
     }
+
+    private int validateTrials(String input){
+        return inputValidator.validateTrialCounts(input);
+    }
 }
