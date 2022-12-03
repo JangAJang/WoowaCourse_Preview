@@ -1,10 +1,14 @@
 package racingcar.domain;
 
+import camp.nextstep.edu.missionutils.Randoms;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
     private final List<Car> cars = new ArrayList<>();
+    private static final int LEAST_NUMBER = 0;
+    private static final int MAX_NUMBER = 9;
 
     public Cars(List<String> names){
         for(String nameEach : names){
@@ -25,6 +29,8 @@ public class Cars {
     }
 
     public void moveCars(){
-
+        for(Car carEach : cars){
+            carEach.move(Randoms.pickNumberInRange(LEAST_NUMBER, MAX_NUMBER));
+        }
     }
 }
