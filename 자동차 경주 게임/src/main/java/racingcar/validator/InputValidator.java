@@ -20,7 +20,8 @@ public class InputValidator {
     }
 
     public int validateTrialCounts(String input){
-        return 0;
+        if(isNotNumber(input)) notNumberException();
+        return Integer.parseInt(input);
     }
 
     private List<String> separateNames(String input){
