@@ -12,7 +12,8 @@
 인스턴스로 List<Car>이 존재한다. 
 1. 생성자 : List<String>이 입력변수로 들어오면 각 문자열마다 Car 객체를 생성해 인스턴스에 추가한다. 
 2. getCarsResult : List<String>으로 모든 Car.makeResult를 반환한다. 
-3. getFinalWinner : 최종 승자의 이름을 List<String>으로 반환한다. 
+3. getFinalWinner : getBiggestPosition과 위치가 같은 최종 승자의 이름을 List<String>으로 반환한다. 
+   1. getBiggestPosition : List<Car>의 position중 최대값을 구한다. 
 4. moveCars : 인스턴스의 모든 Car에 Randoms로 무작위의 값을 생성해 입력변수로 Car.move해준다. 
 
 ### InputValidator

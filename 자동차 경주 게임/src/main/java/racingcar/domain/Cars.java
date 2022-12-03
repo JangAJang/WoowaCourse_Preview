@@ -4,6 +4,7 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cars {
     private final List<Car> cars = new ArrayList<>();
@@ -23,7 +24,9 @@ public class Cars {
     }
 
     public List<String> getFinalWinners(){
-        return new ArrayList<>();
+        return cars.stream()
+                .filter(carEach-> carEach.getPosition() == getBiggestPosition())
+                .map(Car::getName).collect(Collectors.toList());
     }
 
     private int getBiggestPosition(){
