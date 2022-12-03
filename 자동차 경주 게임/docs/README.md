@@ -5,6 +5,7 @@
 2. move : 입력변수가 isAbleToMove면  인스턴스 position을 +1해준다. 
    1. isAbleTomove : 입력변수가 4보다 크거나 같으면 참을 반환한다. 
 3. makeResult : 이름 : -(position개수만큼)을 문자열로 만들어 반환한다. 
+   1. makeResultPosition : -(position개수만큼)을 만들어 반환한다. 
 4. getPosition : position을 반환한다. 
 5. getName : name을 반환한다. 
 

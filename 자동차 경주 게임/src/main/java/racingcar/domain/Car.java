@@ -20,6 +20,10 @@ public class Car {
     public String makeResult(){
         return name + " : " + position;
     }
+
+    private String makeResultPosition(){
+        return "-".repeat(position);
+    }
     public int getPosition(){
         return position;
     }
