@@ -21,6 +21,10 @@ public class InputView {
         return validateNameInput(scanNames());
     }
 
+    public int readTrials(){
+        return validateTrials(scanTrials());
+    }
+
     private String scanNames(){
         return readInput(REQUEST_NAMES);
     }
