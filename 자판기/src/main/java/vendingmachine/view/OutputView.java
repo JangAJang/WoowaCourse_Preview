@@ -22,4 +22,12 @@ public class OutputView {
     private void printEachCoinStatement(Coin coinEach, int quantity){
         System.out.println(coinEach.getLeftStatement(quantity));
     }
+
+    public void printLeftMoney(int money){
+        System.out.println("투입금액: " + money + "원");
+    }
+
+    public void printLeftOver(){
+        System.out.println("잔돈");
+    }
 }
