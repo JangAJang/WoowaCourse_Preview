@@ -1,6 +1,9 @@
 package vendingmachine.validator;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class InputValidator {
 
@@ -27,5 +30,13 @@ public class InputValidator {
     private void notRightPriceException(){
         System.out.println(NOT_RIGHT_PRICE);
         throw new IllegalArgumentException();
+    }
+
+    private List<List<String>> validateItemsInput(String input){
+
+    }
+
+    private List<String> divideBySemiColon(String input){
+        return Arrays.stream(input.split(";")).collect(Collectors.toList());
     }
 }
