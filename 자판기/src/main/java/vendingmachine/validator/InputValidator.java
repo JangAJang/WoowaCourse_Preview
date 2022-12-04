@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import static vendingmachine.ItemIndexing.*;
+
 public class InputValidator {
 
     private static final String NOT_RIGHT_PRICE = "[ERROR]금액은 100원부터 시작하며, 10원으로 나누어떨어져야 한다.";
@@ -45,6 +47,12 @@ public class InputValidator {
     }
 
     private List<String> validateEachItem(String inputEach){
+        List<String> elements = divideByComma(deleteBracket(inputEach));
+        if(isNotThreeElements(elements)) notThreeElementsException(elements);
+        if(isNotNumber(elements.get(PRICE.getIndex())) || isNotDividedByTen(elements.get(PRICE.getIndex()))
+                || isLessThanHundred(elements.get(PRICE.getIndex())))notRightPriceException(elements);
+        if(isNotNumber(elements.get(QUANTITY.getIndex()))) notRightQuantityException(elements);
+        return elements;
     }
 
     private String deleteBracket(String inputEach){
