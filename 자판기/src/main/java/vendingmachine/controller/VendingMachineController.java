@@ -13,4 +13,8 @@ public class VendingMachineController {
     public VendingMachineController(){
         vendingMachine = new VendingMachine(inputView.readPrice());
     }
+
+    private void printAvailableCoins(){
+        outputView.printCoins(vendingMachine.showAllCoins());
+    }
 }
