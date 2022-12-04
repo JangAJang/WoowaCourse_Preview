@@ -73,6 +73,7 @@
 4. readInsertMoney : 
    1. scanInsert: '투입 금액을 입력해 주세요.'를 입력변수로 readInput을 반환한다. 
    2. validateInsert : InputValidator.validatePrice를 반환한다. 
+5. readBuying : '구매할 상품명을 입력해 주세요.'를 출력하고 문자열을 받아온다.
 
 ### OutputView
 1. printCoins : <Coin, Integer>해시맵을 입력받아 Coin.getAmount가 큰 순으로 개수와 출력한다. 

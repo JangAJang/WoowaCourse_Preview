@@ -38,7 +38,7 @@ public class InputValidator {
         throw new IllegalArgumentException();
     }
 
-    private List<List<String>> validateItemsInput(String input){
+    public List<List<String>> validateItemsInput(String input){
         List<List<String>> items = new ArrayList<>();
         for(String eachItem : divideBySemiColon(input)){
             items.add(validateEachItem(eachItem));
