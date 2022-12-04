@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class InputValidator {
 
     private static final String NOT_RIGHT_PRICE = "[ERROR]금액은 100원부터 시작하며, 10원으로 나누어떨어져야 한다.";
+    private static final int THREE_ELEMENTS = 3;
 
     public int validatePrice(String input){
         if(isNotNumber(input) || isNotDividedByTen(input) || isLessThanHundred(input))
@@ -51,5 +52,9 @@ public class InputValidator {
     private List<String> divideByComma(String inputEach){
         return Arrays.stream(inputEach.split(","))
                 .collect(Collectors.toList());
+    }
+
+    private boolean isNotThreeElements(List<String> itemEach){
+        return itemEach.size() != THREE_ELEMENTS;
     }
 }
