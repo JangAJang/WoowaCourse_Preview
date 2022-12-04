@@ -8,9 +8,9 @@ public class Item {
 
     private static final int EMPTY = 0;
 
-    int price;
-    int quantity;
-    String name;
+    private int price;
+    private int quantity;
+    private String name;
 
     public Item(List<String> components) {
         this.name = components.get(NAME.getIndex());

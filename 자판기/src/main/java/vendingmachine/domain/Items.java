@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Items {
 
-    List<Item> items = new ArrayList<>();
+    private final List<Item> items = new ArrayList<>();
 
     public Items(List<List<String>> itemsComponent){
         for(List<String> componentEach : itemsComponent){
@@ -14,7 +14,21 @@ public class Items {
     }
 
     public int takeSpecificItem(String name){
-        return 0;
+        validateItem(name);
+        for(Item itemEach : items){
+            if(nameMatches(itemEach, name)) return itemEach.getPrice();
+        }
+        System.out.println("[ERROR]");
+        throw new IllegalArgumentException();
+    }
+
+    private boolean nameMatches(Item itemEach, String name){
+        return itemEach.isRequestedItem(name);
+    }
+
+    private void validateItem(String name){
+        ItemValidator validator = new ItemValidator();
+        return validator.validateBuyingProduct(name, items);
     }
 
     public int getCheapestItem(){
