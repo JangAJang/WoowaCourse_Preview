@@ -25,7 +25,7 @@ public class Item {
     }
 
     public boolean isRequestedItem(String name){
-        return false;
+        return this.name.equals(name);
     }
 
     public boolean isSoldOut(){
