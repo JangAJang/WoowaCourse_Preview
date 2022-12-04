@@ -33,6 +33,14 @@ public class Coins {
         return money > getTotal();
     }
 
+    private int getTotal(){
+        int total = 0;
+        for(Coin key : coinCounter.keySet()){
+            total += key.getAmount() * coinCounter.get(key);
+        }
+        return total;
+    }
+
     private HashMap<Coin, Integer> giveAll(){
         HashMap<Coin, Integer> leftCoins = new HashMap<>();
         for(Coin key : coinCounter.keySet()){
@@ -46,11 +54,20 @@ public class Coins {
             leftCoins.put(key, coinCounter.get(key));
     }
 
-    private int getTotal(){
-        int total = 0;
-        for(Coin key : coinCounter.keySet()){
-            total += key.getAmount() * coinCounter.get(key);
+    private HashMap<Coin, Integer> makeExchange(int amount){
+        HashMap<Coin, Integer> exchanges = new HashMap<>();
+        exchanges.put(COIN_500, calculateCountOfCoin(COIN_500, amount));
+        exchanges.put(COIN_100, calculateCountOfCoin(COIN_100, amount));
+        exchanges.put(COIN_50, calculateCountOfCoin(COIN_50, amount));
+        exchanges.put(COIN_10, calculateCountOfCoin(COIN_10, amount));
+        return exchanges;
+    }
+
+    private int calculateCountOfCoin(Coin coin, int amount){
+        if(amount >= coin.getAmount()) {
+            amount = amount - coin.getAmount() * Math.min(amount / coin.getAmount(), coinCounter.get(coin));
+            return Math.min(amount / coin.getAmount(), coinCounter.get(coin));
         }
-        return total;
+        return 0;
     }
 }
