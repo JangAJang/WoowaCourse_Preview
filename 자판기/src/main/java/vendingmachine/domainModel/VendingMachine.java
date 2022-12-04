@@ -31,7 +31,7 @@ public class VendingMachine {
     }
 
     public void takeProduct(String itemName){
-
+        insertedMoney.decreaseMoney(items.takeSpecificItem(itemName));
     }
 
     public boolean isUnableToBuyMore(){
