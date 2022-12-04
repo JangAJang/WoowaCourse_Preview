@@ -39,4 +39,12 @@ public class InputValidator {
     private List<String> divideBySemiColon(String input){
         return Arrays.stream(input.split(";")).collect(Collectors.toList());
     }
+
+    private List<String> validateEachItem(String inputEach){
+
+    }
+
+    private String deleteBracket(String inputEach){
+        return inputEach.replace("[]", "");
+    }
 }
