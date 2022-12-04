@@ -11,13 +11,15 @@
 
 ### Item
 1. 생성자 : List<String>을 입력받아 첫째 항을 name, 둘째 항을 price, 셋째 항을 quantity 인스턴스로 초기화시켜준다. 
-2. decreaseQuantity : quantity를 1 감소시킨다. 
+2. decreaseQuantity : quantity를 1 감소시킨다.
 3. getPrice : price를 반환한다. 
 4. isRequestedItem : 문자열을 입력받아 name과 같으면 참을 반환한다.
+5. isSoldOut : Quantity가 0이면 참을 반환한다.
 
 ### Items
-1. 생성자 : List<List<String>>을 입력받아 List의 길이만큼 List<String>으로 Item을 생성해 인스턴스에 추가한다. 
-2. takeSpecificItem : 문자열을 입력받아 해당 name을 가지는 Item을 decreaseQuantity하고 Item의 price를 반환한다. 
+1. 생성자 : List<List<String>>을 입력받아 List의 길이만큼 List<String>으로 Item을 생성해 인스턴스에 추가한다.
+2. buySpecificItem : 입력변수로 들어온 특정 물품을 구입한다.
+   1. validateItem : ItemsValidator.validateBuyingProduct를 실행시킨다.
 3. getCheapestItem : Item.getPrice의 최소값을 반환한다. 
 
 ### InsertedMoney
@@ -26,6 +28,7 @@
 3. isLessThanItems : 금액을 입력받아 인스턴스가 더 작으면 참을 반환한다. 
 4. getLeft : 인스턴스를 반환한다. 
 
+## DomainModel
 ### VendingMachine
 1. 생성자 : 입력변수로 금액을 입력받아 Coins를 생성해준다. 
 2. showAllCoins : Coins.showAvaliableCoins를 반환한다. 
@@ -54,6 +57,13 @@
       5. isNotDividedByTen : 금액 검사에 사용한다. 
       6. isLessThanHundred : 금액 검사에 사용한다. 
       7. notRightItemException : '[ERROR] 올바른 Item이 아닙니다. '를 출력하고 예외처리한다.
+
+### ItemsValidator
+1. validateBuyingProduct : 구매하려는 품목의 이름, List<Item>을 입력받아 예외처리한다. 예외가 없다면 문자열을 반환한다.
+   1. isNotExisting : List<String>과 문자열을 입력받아 문자열에 해당 값이 없으면 참을 반환한다.
+   2. isNotAbleToBuy : Item이 있을 때 Item.isSoldOut일 때 참을 반환한다.
+   3. noNameException : '[ERROR] 해당 품목이 존재하지 않습니다'를 출력하고 예외처리한다.
+   4. cannotBuyException : '[ERROR] 해당 품목이 품절 상태입니다'를 출력하고 예외처리한다. 
 
 ## View
 ### InputView

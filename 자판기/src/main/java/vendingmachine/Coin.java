@@ -12,5 +12,11 @@ public enum Coin {
         this.amount = amount;
     }
 
-    // 추가 기능 구현
+    public int getAmount(){
+        return this.amount;
+    }
+
+    public String getLeftStatement(int count){
+        return "투입금액: " + count + "원";
+    }
 }
