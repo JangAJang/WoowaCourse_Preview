@@ -39,7 +39,11 @@ public class InputValidator {
     }
 
     private List<List<String>> validateItemsInput(String input){
-
+        List<List<String>> items = new ArrayList<>();
+        for(String eachItem : divideBySemiColon(input)){
+            items.add(validateEachItem(eachItem));
+        }
+        return items;
     }
 
     private List<String> divideBySemiColon(String input){
