@@ -17,7 +17,7 @@ public class Item {
     }
 
     public void decreaseQuantity(){
-
+        quantity--;
     }
 
     public int getPrice(){
