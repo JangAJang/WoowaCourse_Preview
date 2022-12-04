@@ -48,7 +48,11 @@ public class VendingMachineController {
     }
 
     private void pickProduct(){
-        vendingMachine.takeProduct(inputView.readBuying());
+        try{
+            vendingMachine.takeProduct(inputView.readBuying());
+        }catch (IllegalArgumentException e){
+            pickProduct();
+        }
     }
 
     private void printExchange(){
