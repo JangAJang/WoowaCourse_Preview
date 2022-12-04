@@ -27,7 +27,7 @@ public class VendingMachine {
     }
 
     public void insertMoney(int money){
-
+        insertedMoney = new InsertedMoney(money);
     }
 
     public void takeProduct(String itemName){
