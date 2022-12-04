@@ -13,7 +13,7 @@ public class InsertedMoney {
     }
 
     public boolean isLessThanItems(int cheapestItem){
-        return false;
+        return leftMoney < cheapestItem;
     }
 
     public int getLeftMoney(){
