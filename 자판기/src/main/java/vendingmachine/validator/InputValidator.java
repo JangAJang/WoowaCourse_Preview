@@ -54,13 +54,18 @@ public class InputValidator {
         List<String> elements = divideByComma(deleteBracket(inputEach));
         if(isNotThreeElements(elements)) notThreeElementsException(elements);
         if(isNotNumber(elements.get(PRICE.getIndex())) || isNotDividedByTen(elements.get(PRICE.getIndex()))
-                || isLessThanHundred(elements.get(PRICE.getIndex())))notRightPriceException(elements);
-        if(isNotNumber(elements.get(QUANTITY.getIndex()))) notRightQuantityException(elements);
+                || isLessThanHundred(elements.get(PRICE.getIndex()))) {
+            notRightPriceException(elements);
+        }
+        if(isNotNumber(elements.get(QUANTITY.getIndex()))) {
+            notRightQuantityException(elements);
+        }
         return elements;
     }
 
     private String deleteBracket(String inputEach){
-        return inputEach.replace("[]", "");
+        String replaced = inputEach.replace("[", "");
+        return replaced.replace("]", "");
     }
 
     private List<String> divideByComma(String inputEach){
