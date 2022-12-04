@@ -33,6 +33,19 @@ public class Coins {
         return money > getTotal();
     }
 
+    private HashMap<Coin, Integer> giveAll(){
+        HashMap<Coin, Integer> leftCoins = new HashMap<>();
+        for(Coin key : coinCounter.keySet()){
+            addToLeft(leftCoins, key);
+        }
+        return leftCoins;
+    }
+
+    private void addToLeft(HashMap<Coin, Integer> leftCoins,Coin key){
+        if(coinCounter.get(key)!=0)
+            leftCoins.put(key, coinCounter.get(key));
+    }
+
     private int getTotal(){
         int total = 0;
         for(Coin key : coinCounter.keySet()){
