@@ -6,6 +6,8 @@ import static vendingmachine.ItemIndexing.*;
 
 public class Item {
 
+    private static final int EMPTY = 0;
+
     int price;
     int quantity;
     String name;
@@ -29,6 +31,6 @@ public class Item {
     }
 
     public boolean isSoldOut(){
-        return false;
+        return quantity == EMPTY;
     }
 }
