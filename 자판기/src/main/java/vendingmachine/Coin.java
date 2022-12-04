@@ -17,6 +17,6 @@ public enum Coin {
     }
 
     public String getLeftStatement(int count){
-        return "투입금액: " + count + "원";
+        return amount + "원 - " + count + "개";
     }
 }

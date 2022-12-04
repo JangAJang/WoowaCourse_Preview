@@ -23,6 +23,7 @@ public class VendingMachineController {
     }
 
     private void printAvailableCoins(){
+        outputView.printContainingMoney();
         outputView.printCoins(vendingMachine.showAllCoins());
     }
 

@@ -8,6 +8,10 @@ import static vendingmachine.Coin.*;
 
 public class OutputView {
 
+    public void printContainingMoney(){
+        System.out.println("자판기가 보유한 동전");
+    }
+
     public void printCoins(HashMap<Coin, Integer> coins){
         printStatementIfExist(coins, COIN_500);
         printStatementIfExist(coins, COIN_100);
@@ -24,7 +28,7 @@ public class OutputView {
     }
 
     public void printLeftMoney(int money){
-        System.out.println("투입금액: " + money + "원");
+        System.out.println("투입 금액: " + money + "원");
     }
 
     public void printLeftOver(){
