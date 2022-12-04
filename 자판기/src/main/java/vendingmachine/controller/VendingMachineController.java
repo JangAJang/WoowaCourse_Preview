@@ -14,6 +14,14 @@ public class VendingMachineController {
         vendingMachine = new VendingMachine(inputView.readPrice());
     }
 
+    public void runMachine(){
+        printAvailableCoins();
+        createItems();
+        insertMoney();
+        while(isAvailableToBuy()) buyProduct();
+        printExchange();
+    }
+
     private void printAvailableCoins(){
         outputView.printCoins(vendingMachine.showAllCoins());
     }
