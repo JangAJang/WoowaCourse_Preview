@@ -21,4 +21,8 @@ public class VendingMachineController {
     private void createItems(){
         vendingMachine.makeItems(inputView.readItems());
     }
+
+    private void insertMoney(){
+        vendingMachine.insertMoney(inputView.readInsertMoney());
+    }
 }
