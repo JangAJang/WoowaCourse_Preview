@@ -28,4 +28,16 @@ public class Coins {
     public HashMap<Coin, Integer> giveExchange(int amount){
         return this.coinCounter;
     }
+
+    private boolean isTotalLessThanLeftMoney(int money){
+        return money > getTotal();
+    }
+
+    private int getTotal(){
+        int total = 0;
+        for(Coin key : coinCounter.keySet()){
+            total += key.getAmount() * coinCounter.get(key);
+        }
+        return total;
+    }
 }

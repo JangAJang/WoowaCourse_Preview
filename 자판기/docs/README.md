@@ -6,6 +6,7 @@
 2. showAvailableCoins : HashMap을 반환한다. 
 3. giveExchange : 입력변수의 값을 잔돈 HashMap<Coin, Integer>로 반환한다.
    1. isTotalLessThanLeftMoney : 정수형 변수를 입력받아 HashMap의 Coin.getAmount * Integer의 총합이 더 작으면 참을 반환한다.
+      1. getTotal : 키의 amount*value의 총합을 구한다.
    2. giveAll : 인스턴스 해시맵의 value가 0인 부분을 제외하고 전부 반환한다. 
    3. makeExchange : 해시맵의 동전으로 입력변수의 금액을 만들어 HashMap으로 반환한다. 
 
