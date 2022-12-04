@@ -25,4 +25,8 @@ public class VendingMachineController {
     private void insertMoney(){
         vendingMachine.insertMoney(inputView.readInsertMoney());
     }
+
+    private boolean isAvailableToBuy(){
+        return !vendingMachine.isUnableToBuyMore();
+    }
 }
