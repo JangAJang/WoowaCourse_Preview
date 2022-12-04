@@ -47,4 +47,9 @@ public class InputValidator {
     private String deleteBracket(String inputEach){
         return inputEach.replace("[]", "");
     }
+
+    private List<String> divideByComma(String inputEach){
+        return Arrays.stream(inputEach.split(","))
+                .collect(Collectors.toList());
+    }
 }
