@@ -8,7 +8,9 @@ public class Items {
     List<Item> items = new ArrayList<>();
 
     public Items(List<List<String>> itemsComponent){
-
+        for(List<String> componentEach : itemsComponent){
+            items.add(new Item(componentEach));
+        }
     }
 
     public int takeSpecificItem(String name){
