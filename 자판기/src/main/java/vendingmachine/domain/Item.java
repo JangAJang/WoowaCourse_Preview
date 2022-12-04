@@ -6,6 +6,7 @@ import static vendingmachine.ItemIndexing.*;
 
 public class Item {
 
+    private static final String EXCEPTION_STATEMENT = "[ERROR] 해당 품목이 품절 상태입니다";
     private static final int EMPTY = 0;
 
     private int price;
@@ -19,6 +20,7 @@ public class Item {
     }
 
     public void decreaseQuantity(){
+        if(isSoldOut()) cannotButException();
         quantity--;
     }
 
@@ -32,5 +34,10 @@ public class Item {
 
     public boolean isSoldOut(){
         return quantity == EMPTY;
+    }
+
+    private void cannotButException(){
+        System.out.println(EXCEPTION_STATEMENT);
+        throw new IllegalArgumentException();
     }
 }

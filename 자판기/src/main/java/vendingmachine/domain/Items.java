@@ -14,21 +14,17 @@ public class Items {
     }
 
     public int takeSpecificItem(String name){
-        validateItem(name);
         for(Item itemEach : items){
-            if(nameMatches(itemEach, name)) return itemEach.getPrice();
+            if(itemEach.isRequestedItem(name))
+                return itemEach.getPrice();
         }
-        System.out.println("[ERROR]");
+        noNameException();
+        return 0;
+    }
+
+    private void noNameException(){
+        System.out.println("[ERROR] 해당 품목이 존재하지 않습니다");
         throw new IllegalArgumentException();
-    }
-
-    private boolean nameMatches(Item itemEach, String name){
-        return itemEach.isRequestedItem(name);
-    }
-
-    private void validateItem(String name){
-        ItemValidator validator = new ItemValidator();
-        return validator.validateBuyingProduct(name, items);
     }
 
     public int getCheapestItem(){
