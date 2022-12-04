@@ -23,6 +23,7 @@
 2. buySpecificItem : 입력변수로 들어온 특정 물품을 구입한다.
    1. noNameException : '[ERROR] 해당 품목이 존재하지 않습니다'를 출력하고 예외처리한다.
 3. getCheapestItem : Item.getPrice의 최소값을 반환한다. 
+4. isAllSoldOut : 모든 품목이 soldOut이면 참을 반환한다. 
 
 ### InsertedMoney
 1. 생성자 : 금액을 입력받아 인스턴스를 초기화시킨다. 

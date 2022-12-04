@@ -33,4 +33,11 @@ public class Items {
     public int getCheapestItem(){
         return (int) items.stream().map(Item::getPrice).sorted().toArray()[0];
     }
+
+    public boolean isAllSoldOut(){
+        for(Item itemEach: items){
+            if(!itemEach.isSoldOut())return false;
+        }
+        return true;
+    }
 }

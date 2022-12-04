@@ -35,7 +35,8 @@ public class VendingMachine {
     }
 
     public boolean isUnableToBuyMore(){
-        return insertedMoney.isLessThanItems(items.getCheapestItem());
+        return insertedMoney.isLessThanItems(items.getCheapestItem())
+                || items.isAllSoldOut();
     }
 
     public int getLeftInsertedMoney(){
