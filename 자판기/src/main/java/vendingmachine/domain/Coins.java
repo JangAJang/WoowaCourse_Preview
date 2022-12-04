@@ -9,7 +9,7 @@ import static vendingmachine.Coin.*;
 
 public class Coins {
 
-    HashMap<Coin, Integer> coinCounter = new HashMap<>();
+    private final HashMap<Coin, Integer> coinCounter = new HashMap<>();
 
     public Coins(int price){
         addCoin(COIN_10, addCoin(COIN_50, addCoin(COIN_100,addCoin(COIN_500, price))));

@@ -9,9 +9,9 @@ public class Item {
     private static final String EXCEPTION_STATEMENT = "[ERROR] 해당 품목이 품절 상태입니다";
     private static final int EMPTY = 0;
 
-    private int price;
+    private final int price;
     private int quantity;
-    private String name;
+    private final String name;
 
     public Item(List<String> components) {
         this.name = components.get(NAME.getIndex());
