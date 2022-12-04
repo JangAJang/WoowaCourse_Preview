@@ -20,15 +20,27 @@ public class InputView {
     }
 
     public int readPrice(){
-        return inputValidator.validatePrice(readInput(REQUEST_PRICE));
+        try{
+            return inputValidator.validatePrice(readInput(REQUEST_PRICE));
+        }catch (IllegalArgumentException e){
+            return readPrice();
+        }
     }
 
     public int readInsertMoney(){
-        return inputValidator.validatePrice(readInput(REQUEST_INSERT));
+        try{
+            return inputValidator.validatePrice(readInput(REQUEST_INSERT));
+        }catch (IllegalArgumentException e){
+            return readInsertMoney();
+        }
     }
 
     public List<List<String>> readItems(){
-        return inputValidator.validateItemsInput(readInput(REQUEST_ITEMS));
+        try{
+            return inputValidator.validateItemsInput(readInput(REQUEST_ITEMS));
+        }catch (IllegalArgumentException e){
+            return readItems();
+        }
     }
 
     public String readBuying(){
