@@ -9,7 +9,7 @@ public class InsertedMoney {
     }
 
     public void decreaseMoney(int money){
-
+        leftMoney -= money;
     }
 
     public boolean isLessThanItems(int cheapestItem){
