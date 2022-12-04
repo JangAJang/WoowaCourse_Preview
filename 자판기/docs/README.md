@@ -16,11 +16,12 @@
 3. getPrice : price를 반환한다. 
 4. isRequestedItem : 문자열을 입력받아 name과 같으면 참을 반환한다.
 5. isSoldOut : Quantity가 0이면 참을 반환한다.
+6. cannotBuyException : '[ERROR] 해당 품목이 품절 상태입니다'를 출력하고 예외처리한다.
 
 ### Items
 1. 생성자 : List<List<String>>을 입력받아 List의 길이만큼 List<String>으로 Item을 생성해 인스턴스에 추가한다.
 2. buySpecificItem : 입력변수로 들어온 특정 물품을 구입한다.
-   1. validateItem : ItemsValidator.validateBuyingProduct를 실행시킨다.
+   1. noNameException : '[ERROR] 해당 품목이 존재하지 않습니다'를 출력하고 예외처리한다.
 3. getCheapestItem : Item.getPrice의 최소값을 반환한다. 
 
 ### InsertedMoney
@@ -58,13 +59,6 @@
       5. isNotDividedByTen : 금액 검사에 사용한다. 
       6. isLessThanHundred : 금액 검사에 사용한다. 
       7. notRightItemException : '[ERROR] 올바른 Item이 아닙니다. '를 출력하고 예외처리한다.
-
-### ItemsValidator
-1. validateBuyingProduct : 구매하려는 품목의 이름, List<Item>을 입력받아 예외처리한다. 예외가 없다면 문자열을 반환한다.
-   1. isNotExisting : List<String>과 문자열을 입력받아 문자열에 해당 값이 없으면 참을 반환한다.
-   2. isNotAbleToBuy : Item이 있을 때 Item.isSoldOut일 때 참을 반환한다.
-   3. noNameException : '[ERROR] 해당 품목이 존재하지 않습니다'를 출력하고 예외처리한다.
-   4. cannotBuyException : '[ERROR] 해당 품목이 품절 상태입니다'를 출력하고 예외처리한다. 
 
 ## View
 ### InputView

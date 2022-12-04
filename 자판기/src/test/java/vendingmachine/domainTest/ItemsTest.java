@@ -41,8 +41,7 @@ public class ItemsTest {
     @DisplayName("구매 품목이 없는 상품이면 예외처리된다.")
     @Test
     void noNameExceptionTest(){
-        items.takeSpecificItem("우유");
-        assertThatThrownBy(()->items.takeSpecificItem("콜라"))
+        assertThatThrownBy(()->items.takeSpecificItem("우유"))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 

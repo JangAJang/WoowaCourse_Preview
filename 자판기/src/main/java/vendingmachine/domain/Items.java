@@ -2,6 +2,7 @@ package vendingmachine.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Items {
 
@@ -15,8 +16,10 @@ public class Items {
 
     public int takeSpecificItem(String name){
         for(Item itemEach : items){
-            if(itemEach.isRequestedItem(name))
+            if(itemEach.isRequestedItem(name)){
+                itemEach.decreaseQuantity();
                 return itemEach.getPrice();
+            }
         }
         noNameException();
         return 0;
@@ -28,6 +31,6 @@ public class Items {
     }
 
     public int getCheapestItem(){
-        return 0;
+        return (int) items.stream().map(Item::getPrice).sorted().toArray()[0];
     }
 }
