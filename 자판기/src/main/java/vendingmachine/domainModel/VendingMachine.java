@@ -39,10 +39,10 @@ public class VendingMachine {
     }
 
     public int getLeftInsertedMoney(){
-        return 0;
+        return insertedMoney.getLeftMoney();
     }
 
     public HashMap<Coin, Integer> showExchange(){
-        return new HashMap<>();
+        return coins.giveExchange(insertedMoney.getLeftMoney());
     }
 }
