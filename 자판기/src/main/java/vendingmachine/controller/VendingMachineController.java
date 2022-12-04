@@ -42,4 +42,14 @@ public class VendingMachineController {
     private void pickProduct(){
         vendingMachine.takeProduct(inputView.readBuying());
     }
+
+    private void printExchange(){
+        printLeftMoney();
+        printLeftCoins();
+    }
+
+    private void printLeftCoins(){
+        outputView.printLeftOver();
+        outputView.printCoins(vendingMachine.showExchange());
+    }
 }
