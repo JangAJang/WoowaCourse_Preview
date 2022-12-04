@@ -16,8 +16,7 @@ public class Coins {
     }
 
     private int addCoin(Coin coin, int price){
-        coinCounter.put(coin,
-                Randoms.pickNumberInRange(0, price/coin.getAmount()));
+        coinCounter.put(coin, price / coin.getAmount());
         return price - coinCounter.get(coin)*coin.getAmount();
     }
 
@@ -26,7 +25,8 @@ public class Coins {
     }
 
     public HashMap<Coin, Integer> giveExchange(int amount){
-        return this.coinCounter;
+        if(isTotalLessThanLeftMoney(amount)) return giveAll();
+        return makeExchange(amount);
     }
 
     private boolean isTotalLessThanLeftMoney(int money){
