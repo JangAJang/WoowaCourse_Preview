@@ -11,4 +11,8 @@ public class InputValidator {
     private boolean isNotNumber(String input){
         return !Pattern.matches("^[0-9]*$", input);
     }
+
+    private boolean isNotDividedByTen(String input){
+        return Integer.parseInt(input)%10 !=0;
+    }
 }
