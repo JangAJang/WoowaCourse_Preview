@@ -10,16 +10,16 @@ import java.util.List;
 
 public class VendingMachine {
 
-    Coins coins;
-    Items items;
-    InsertedMoney insertedMoney;
+    private Coins coins;
+    private Items items;
+    private InsertedMoney insertedMoney;
 
     public VendingMachine(int money){
         coins = new Coins(money);
     }
 
     public HashMap<Coin, Integer> showAllCoins(){
-        return new HashMap<>();
+        return coins.showAvailableCoins();
     }
 
     public void makeItems(List<List<String>> components){
