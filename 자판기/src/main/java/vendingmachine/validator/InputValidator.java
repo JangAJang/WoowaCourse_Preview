@@ -15,4 +15,8 @@ public class InputValidator {
     private boolean isNotDividedByTen(String input){
         return Integer.parseInt(input)%10 !=0;
     }
+
+    private boolean isLessThanHundred(String input){
+        return Integer.parseInt(input) < 100;
+    }
 }
