@@ -29,4 +29,17 @@ public class VendingMachineController {
     private boolean isAvailableToBuy(){
         return !vendingMachine.isUnableToBuyMore();
     }
+
+    private void buyProduct(){
+        printLeftMoney();
+        pickProduct();
+    }
+
+    private void printLeftMoney(){
+        outputView.printLeftMoney(vendingMachine.getLeftInsertedMoney());
+    }
+
+    private void pickProduct(){
+        vendingMachine.takeProduct(inputView.readBuying());
+    }
 }
