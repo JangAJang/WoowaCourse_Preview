@@ -23,7 +23,7 @@ public class VendingMachine {
     }
 
     public void makeItems(List<List<String>> components){
-
+        items = new Items(components);
     }
 
     public void insertMoney(int money){
