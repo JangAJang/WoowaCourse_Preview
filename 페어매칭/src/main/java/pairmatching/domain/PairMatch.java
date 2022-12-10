@@ -18,6 +18,8 @@ public class PairMatch {
     private static final int COURSE_INDEX = 0;
     private static final int LEVEL_INDEX = 1;
     private static final int MISSION_INDEX = 2;
+    private static final String BACK_END = "backend-crew.md";
+    private static final String FRONT_END = "frontend-crew.md";
 
     private final Course course;
     private final Level level;
@@ -53,12 +55,17 @@ public class PairMatch {
         return new ArrayList<>();
     }
 
+    private List<String> getMembers(){
+        if(isBackEnd()) return enlistNamesFrom(BACK_END);
+        return enlistNamesFrom(FRONT_END);
+    }
+
     private boolean isBackEnd(){
         return course.equals(Course.BACKEND);
     }
 
-    private List<String> enlistBackEndCrew(){
-        File file = new File(Objects.requireNonNull(this.getClass().getClassLoader().getResource("test.txt")).getFile());
+    private List<String> enlistNamesFrom(String resourceFileName){
+        File file = new File(Objects.requireNonNull(this.getClass().getClassLoader().getResource(resourceFileName)).getFile());
         List<String> names = new ArrayList<>();
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
