@@ -6,6 +6,7 @@ import pairmatching.enums.Level;
 import static pairmatching.enums.Course.BACKEND;
 import static pairmatching.enums.Course.FRONTEND;
 import static pairmatching.enums.Level.ONE;
+import static pairmatching.enums.Level.TWO;
 
 public class PairMatchValidator {
 
@@ -32,5 +33,9 @@ public class PairMatchValidator {
 
     private boolean isLevelOne(String level){
         return level.equals(ONE.getName());
+    }
+
+    private boolean isLevelTwo(String level){
+        return level.equals(TWO.getName());
     }
 }
