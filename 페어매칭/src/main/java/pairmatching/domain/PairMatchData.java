@@ -5,10 +5,15 @@ import java.util.List;
 
 public class PairMatchData {
 
-    List<PairMatch> pairMatches;
+    private final List<PairMatch> pairMatches = new ArrayList<>();
 
     public List<List<String>> createPairMatch(List<String> components){
-        return new ArrayList<>();
+        PairMatch pairMatch = new PairMatch(components);
+        groupMembers(pairMatch);
+    }
+
+    private void groupMembers(PairMatch pairMatch){
+        pairMatch.createEachPair();
     }
 
     public boolean containsExistingDataAlready(List<String> components){
