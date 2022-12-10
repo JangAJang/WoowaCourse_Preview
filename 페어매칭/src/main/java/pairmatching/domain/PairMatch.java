@@ -52,8 +52,8 @@ public class PairMatch {
                 mission.getName().equals(comparator.get(MISSION_INDEX));
     }
 
-    public List<List<String>> createEachPair(List<String> names){
-        return new ArrayList<>();
+    public void createEachPair(){
+        createPairs(shuffleMembersOrder(getMembers()));
     }
 
     private List<String> getMembers(){
