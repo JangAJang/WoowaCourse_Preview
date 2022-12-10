@@ -14,6 +14,7 @@ public class PairMatchValidator {
     private static final String NOT_RIGHT_COURSE = "[ERROR] 입력한 코스가 존재하지 않습니다.";
     private static final String NO_MISSION_FOR_LEVEL = "[ERROR] 해당 레벨에는 미션이 존재하지 않습니다.";
     private static final String NOT_RIGHT_LEVEL = "[ERROR] 해당 레벨이 존재하지 않습니다.";
+    private static final String NOT_RIGHT_MISSION = "[ERROR] 존재하지 않는 미션입니다.";
 
     public Course validateCourse(String name){
         if(isBackEnd(name)) return BACKEND;
@@ -70,7 +71,10 @@ public class PairMatchValidator {
     }
 
     private Mission getLevelOneMission(String mission){
-
+        if(isRacing(mission)) return RACING;
+        if(isLotto(mission)) return LOTTO;
+        if(isBaseball(mission)) return BASEBALL;
+        return notRightMissionException()
     }
 
     private boolean isRacing(String mission){
@@ -103,5 +107,10 @@ public class PairMatchValidator {
 
     private boolean isDistribute(String mission){
         return mission.equals(DISTRIBUTE.getName());
+    }
+
+    private Mission notRightMissionException(){
+        System.out.println(NOT_RIGHT_MISSION);
+        throw new IllegalArgumentException();
     }
 }
