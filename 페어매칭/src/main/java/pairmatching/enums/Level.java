@@ -2,11 +2,11 @@ package pairmatching.enums;
 
 public enum Level {
 
-    ONE("래밸1"),
-    TWO("래밸2"),
-    THREE("래밸3"),
-    FOUR("래밸4"),
-    FIVE("래밸5");
+    ONE("레벨1"),
+    TWO("레벨2"),
+    THREE("레벨3"),
+    FOUR("레벨4"),
+    FIVE("레벨5");
 
     private final String name;
 

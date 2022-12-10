@@ -8,7 +8,7 @@ public class Pair {
     private final List<String> names;
 
     public Pair(List<String> names){
-        this.names = names.stream().sorted().collect(Collectors.toList());
+        this.names = names;
     }
 
     public List<String> getNames() {

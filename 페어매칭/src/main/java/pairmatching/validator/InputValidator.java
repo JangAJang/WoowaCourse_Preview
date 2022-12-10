@@ -49,8 +49,8 @@ public class InputValidator {
     }
 
     private List<String> separateComponent(String input){
-        return Arrays.stream(input.replaceAll(" ", "")
-                .split(", ")).collect(Collectors.toList());
+        return Arrays.stream(input.replace(" ", "")
+                .split(",")).collect(Collectors.toList());
     }
 
     private boolean isNotThree(List<String> components){

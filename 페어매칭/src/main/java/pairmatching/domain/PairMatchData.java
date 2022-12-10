@@ -23,13 +23,14 @@ public class PairMatchData {
     }
 
     private PairMatch tryMakingPairMatch(PairMatch pairMatch, int count){
-        if(MAXIMUM_TRIAL_COUNT == 3) threeDuplicatedException();
+        if(count == MAXIMUM_TRIAL_COUNT) threeDuplicatedException();
         groupMembers(pairMatch);
         if(containsSamePairBefore(pairMatch)) return tryMakingPairMatch(pairMatch, count+1);
         return pairMatch;
     }
 
     private boolean containsSamePairBefore(PairMatch pairMatch){
+        if(pairMatches.isEmpty()) return false;
         for(PairMatch pairMatchEach : pairMatches){
             if(pairMatchEach.hasSamePairBefore(pairMatch)) return true;
         }
