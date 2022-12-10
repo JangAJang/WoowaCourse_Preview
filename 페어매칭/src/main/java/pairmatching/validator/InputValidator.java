@@ -2,6 +2,10 @@ package pairmatching.validator;
 
 import pairmatching.enums.OperationCommand;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static pairmatching.enums.OperationCommand.*;
 
 public class InputValidator {
@@ -35,5 +39,9 @@ public class InputValidator {
     private OperationCommand notOperationException(){
         System.out.println(NOT_RIGHT_COMMAND);
         throw new IllegalArgumentException();
+    }
+
+    private List<String> separateComponent(String input){
+        return Arrays.stream(input.split(", ")).collect(Collectors.toList());
     }
 }
