@@ -41,4 +41,9 @@ public class PairMatchValidator {
     private boolean isLevelFour(String level){
         return level.equals(FOUR.getName());
     }
+
+    private boolean isLevelThreeOrFive(String level){
+        return level.equals(THREE.getName()) ||
+                level.equals(FIVE.getName());
+    }
 }
