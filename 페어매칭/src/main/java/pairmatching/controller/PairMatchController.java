@@ -15,6 +15,21 @@ public class PairMatchController {
     private final InputView inputView = new InputView();
     private final OutputView outputView = new OutputView();
 
+    public void runPairMatching(){
+        OperationCommand command;
+        command = inputView.readOperation();
+        while(!command.equals(QUIT)){
+            runEachRound(command);
+            command = inputView.readOperation();
+        }
+    }
+
+    private void runEachRound(OperationCommand command){
+        if(isPairMatching(command)) matchPair();
+        if(isReadPair(command)) readPair();
+        if(isResetPairs(command)) resetPair();
+    }
+
     private boolean isPairMatching(OperationCommand command){
         return command.equals(MATCH_PAIR);
     }
