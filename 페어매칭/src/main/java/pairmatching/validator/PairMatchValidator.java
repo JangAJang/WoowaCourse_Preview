@@ -84,4 +84,8 @@ public class PairMatchValidator {
     private boolean isBaseball(String mission){
         return mission.equals(BASEBALL.getName());
     }
+
+    private boolean isShopping(String mission){
+        return mission.equals(SHOPPING.getName());
+    }
 }
