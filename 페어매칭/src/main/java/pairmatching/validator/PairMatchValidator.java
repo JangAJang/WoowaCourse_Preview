@@ -1,9 +1,11 @@
 package pairmatching.validator;
 
 import pairmatching.enums.Course;
+import pairmatching.enums.Level;
 
 import static pairmatching.enums.Course.BACKEND;
 import static pairmatching.enums.Course.FRONTEND;
+import static pairmatching.enums.Level.ONE;
 
 public class PairMatchValidator {
 
@@ -22,5 +24,13 @@ public class PairMatchValidator {
 
     private boolean isFrontEnd(String name){
         return name.equals(FRONTEND.getName());
+    }
+
+    private Level validateLevel(String level){
+
+    }
+
+    private boolean isLevelOne(String level){
+        return level.equals(ONE.getName());
     }
 }
