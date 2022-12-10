@@ -12,7 +12,9 @@ public class PairMatchData {
 
     public List<List<String>> createPairMatch(List<String> components){
         PairMatch pairMatch = new PairMatch(components);
-        groupMembers(pairMatch);
+        pairMatch = tryMakingPairMatch(pairMatch, 0);
+        pairMatches.add(pairMatch);
+        return pairMatch.getPairsMembers();
     }
 
     private void groupMembers(PairMatch pairMatch){
@@ -21,7 +23,7 @@ public class PairMatchData {
 
     private PairMatch tryMakingPairMatch(PairMatch pairMatch, int count){
         if(MAXIMUM_TRIAL_COUNT == 3) threeDuplicatedException();
-        pairMatch.createEachPair();
+        groupMembers(pairMatch);
         if(containsSamePairBefore(pairMatch)) return tryMakingPairMatch(pairMatch, count+1);
         return pairMatch;
     }
