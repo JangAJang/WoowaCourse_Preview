@@ -16,6 +16,13 @@ public class PairMatchData {
         pairMatch.createEachPair();
     }
 
+    private boolean containsSamePairBefore(PairMatch pairMatch){
+        for(PairMatch pairMatchEach : pairMatches){
+            if(pairMatchEach.hasSamePairBefore(pairMatch)) return true;
+        }
+        return false;
+    }
+
     public boolean containsExistingDataAlready(List<String> components){
         return false;
     }
