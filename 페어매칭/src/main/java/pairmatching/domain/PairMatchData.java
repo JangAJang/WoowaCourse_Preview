@@ -61,6 +61,17 @@ public class PairMatchData {
     }
 
     public List<List<String>> recreatePairMatch(List<String> components){
-        return new ArrayList<>();
+        for(PairMatch pairMatch : pairMatches){
+            if(pairMatch.isSame(components)) return getRecreation(pairMatch);
+        }
+        System.out.println("[ERROR] 해당 페어매칭을 재생성할 수 없습니다.");
+        throw new IllegalArgumentException();
+    }
+
+    private List<List<String>> getRecreation(PairMatch pairMatch){
+        pairMatches.remove(pairMatch);
+        pairMatch.createEachPair();
+        pairMatches.add(pairMatch);
+        return pairMatch.getPairsMembers();
     }
 }
