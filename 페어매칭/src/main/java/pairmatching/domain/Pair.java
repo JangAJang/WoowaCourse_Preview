@@ -15,6 +15,6 @@ public class Pair {
     }
 
     public boolean containsPair(List<String> names){
-        return false;
+        return this.names.contains(names) || names.contains(this.names);
     }
 }
