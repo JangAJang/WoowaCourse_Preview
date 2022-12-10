@@ -48,6 +48,10 @@ public class PairMatch {
         return new ArrayList<>();
     }
 
+    private boolean isBackEnd(){
+        return course.equals(Course.BACKEND);
+    }
+
     public boolean hasSamePairBefore(){
         return false;
     }
