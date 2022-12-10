@@ -84,6 +84,12 @@ public class PairMatchValidator {
         return notRightMissionException();
     }
 
+    private Mission getLevelFourMission(String mission){
+        if(isImprove(mission)) return IMPROVE;
+        if(isDistribute(mission)) return DISTRIBUTE;
+        return notRightMissionException();
+    }
+
     private boolean isRacing(String mission){
         return mission.equals(RACING.getName());
     }
