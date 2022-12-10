@@ -29,6 +29,9 @@ public class PairTest {
     @DisplayName("같은 페어인지 확인할 때, 구성요소가 전부 같을 때 참을 반환한다. ")
     @Test
     void isSamePairTest(){
+        System.out.println(pair.getNames().toString());
+        System.out.println(makeNames()
+                .stream().sorted().collect(Collectors.toList()));
         assertThat(pair.containsPair(makeNames()
                 .stream().sorted().collect(Collectors.toList())))
                 .isTrue();

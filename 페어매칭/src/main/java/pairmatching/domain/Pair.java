@@ -16,6 +16,15 @@ public class Pair {
     }
 
     public boolean containsPair(List<String> names){
-        return this.names.contains(names) || names.contains(this.names);
+        int count = 0;
+        for (String name : names) {
+            count += countIfContains(name);
+        }
+        return count >= 2;
+    }
+
+    private int countIfContains(String name){
+        if(names.contains(name)) return 1;
+        return 0;
     }
 }
