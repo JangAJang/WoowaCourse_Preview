@@ -85,8 +85,15 @@ public class PairMatch {
         return names;
     }
 
-    public boolean hasSamePairBefore(){
+    public boolean hasSamePairBefore(PairMatch other){
+        if(other.getLevel().equals(this.level)
+                && other.getPairs().isDuplicatedPairs(this.pairs))
+            return true;
         return false;
+    }
+
+    public Pairs getPairs(){
+        return this.pairs;
     }
 
     public List<List<String>> getPairsMembers(){
