@@ -7,6 +7,7 @@ public class PairMatchData {
 
     private static final String THREE_DUP_SAME_PAIR = "[ERROR] 페어 매칭을 3회 시도해도 같은 페어가 존재해 정지합니다.";
     private static final int MAXIMUM_TRIAL_COUNT = 3;
+    private static final String NOT_EXISTING_DATA = "[ERROR] 해당 페어매칭에 대한 데이터가 존재하지 않습니다.";
 
     private final List<PairMatch> pairMatches = new ArrayList<>();
 
@@ -48,7 +49,11 @@ public class PairMatchData {
     }
 
     public List<List<String>> readPairMatch(List<String> components){
-        return new ArrayList<>();
+        for(PairMatch pairMatchEach : pairMatches){
+            if(pairMatchEach.isSame(components)) return pairMatchEach.getPairsMembers();
+        }
+        System.out.println(NOT_EXISTING_DATA);
+        throw new IllegalArgumentException();
     }
 
     public void resetData(){
