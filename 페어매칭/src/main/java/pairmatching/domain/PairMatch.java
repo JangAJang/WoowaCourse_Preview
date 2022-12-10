@@ -14,9 +14,9 @@ public class PairMatch {
     private static final int LEVEL_INDEX = 1;
     private static final int MISSION_INDEX = 2;
 
-    private Course course;
-    private Level level;
-    private Mission mission;
+    private final Course course;
+    private final Level level;
+    private final Mission mission;
     private Pairs pairs;
 
     public PairMatch(List<String> components){
@@ -39,7 +39,9 @@ public class PairMatch {
     }
 
     public boolean isSame(List<String> comparator){
-        return false;
+        return course.getName().equals(comparator.get(COURSE_INDEX)) &&
+                level.getName().equals(comparator.get(LEVEL_INDEX)) &&
+                mission.getName().equals(comparator.get(MISSION_INDEX));
     }
 
     public List<List<String>> createEachPair(List<String> names){
