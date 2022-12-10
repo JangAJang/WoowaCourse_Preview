@@ -60,7 +60,7 @@ QUIT("Q"), MATCH_PAIR("1"), READ_PAIR("2"), CLEAR("3")을 가지며 getCommand�
 
 ## Validator
 ### InputValidator
-1. validateOperation : 입력변수가 1부터 3이 아니거나 Q가 아니면 예외처리하고, 맞다면 문자열로 반환한다. 
+1. validateOperation : 입력변수가 1부터 3이 아니거나 Q가 아니면 예외처리하고, 맞다면 OperationCommand로 반환한다. 
    1. isQ : Quit.getCommand면 참을 반환한다. 
    2. isPairMatch : PAIR_MATCH.getCommand와 같으면 참을 반환한다. 
    3. isReaPair : READ_PAIR.getCommand면 참을 반환한다. 
