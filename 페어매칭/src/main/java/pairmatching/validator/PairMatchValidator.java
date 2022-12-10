@@ -7,8 +7,13 @@ import static pairmatching.enums.Course.FRONTEND;
 
 public class PairMatchValidator {
 
-    public Course validateCourse(String name){
+    private static final String NOT_RIGHT_COURSE = "[ERROR] 입력한 코스가 존재하지 않습니다.";
 
+    public Course validateCourse(String name){
+        if(isBackEnd(name)) return BACKEND;
+        if(isFrontEnd(name)) return FRONTEND;
+        System.out.println(NOT_RIGHT_COURSE);
+        throw new IllegalArgumentException();
     }
 
     private boolean isBackEnd(String name){
