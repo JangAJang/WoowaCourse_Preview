@@ -20,7 +20,6 @@ IMPROVE("성능개선"), DISTRIBUTE("배포")
 2. isPairMember : 입력변수 이름을 받아 인스턴스에 존재하면 참을 반환한다. 
 3. getMembers : 인스턴스를 반환한다. 
 4. isSamePair : List<String>을 입력받아 인스턴스와 같으면 참을 반환한다.
-5. getMembers : List<String>을 반환한다. 
 
 ### Pairs
 1. 생성자 : List<String>을 입력받는다. 2명씩 Pair를 생성하다가 마지막이 3명이면 하나로 Pair를 만들어 List<Pair>인스턴스에 추가한다. 
