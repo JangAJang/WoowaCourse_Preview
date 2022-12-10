@@ -34,7 +34,7 @@ public class PairMatch {
         return false;
     }
 
-    public List<List<String>> createEachPair(){
+    public List<List<String>> createEachPair(List<String> names){
         return new ArrayList<>();
     }
 
