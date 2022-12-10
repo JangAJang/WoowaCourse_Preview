@@ -61,4 +61,11 @@ public class InputValidator {
         System.out.println(NOT_THREE_COMPONENT);
         throw new IllegalArgumentException();
     }
+
+    public boolean validateRematch(String input){
+        if(input.equals("네")) return true;
+        if(input.equals("아니오"))return false;
+        System.out.println("[ERROR] 입력은 네 혹은 아니오로 해주세요.");
+        throw new IllegalArgumentException();
+    }
 }
