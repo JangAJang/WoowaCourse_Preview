@@ -57,7 +57,7 @@ public class PairMatchData {
     }
 
     public void resetData(){
-
+        pairMatches.clear();
     }
 
     public List<List<String>> recreatePairMatch(List<String> components){
