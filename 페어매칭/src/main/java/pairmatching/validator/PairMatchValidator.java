@@ -67,7 +67,9 @@ public class PairMatchValidator {
     }
 
     public Mission validateMission(String level, String mission){
-
+        if(isLevelOne(level)) return getLevelOneMission(mission);
+        if(isLevelTwo(level)) return getLevelTwoMission(mission);
+        return getLevelFourMission(mission);
     }
 
     private Mission getLevelOneMission(String mission){
