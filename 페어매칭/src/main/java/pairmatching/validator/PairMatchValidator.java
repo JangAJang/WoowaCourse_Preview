@@ -74,7 +74,14 @@ public class PairMatchValidator {
         if(isRacing(mission)) return RACING;
         if(isLotto(mission)) return LOTTO;
         if(isBaseball(mission)) return BASEBALL;
-        return notRightMissionException()
+        return notRightMissionException();
+    }
+
+    private Mission getLevelTwoMission(String mission){
+        if(isShopping(mission)) return SHOPPING;
+        if(isPayment(mission)) return PAYMENT;
+        if(isSubway(mission)) return SUBWAY;
+        return notRightMissionException();
     }
 
     private boolean isRacing(String mission){
