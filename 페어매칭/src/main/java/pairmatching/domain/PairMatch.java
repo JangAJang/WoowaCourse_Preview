@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class PairMatch {
 
@@ -97,6 +98,7 @@ public class PairMatch {
     }
 
     public List<List<String>> getPairsMembers(){
-        return new ArrayList<>();
+        return this.pairs.getPairs().stream().map(Pair::getNames)
+                .collect(Collectors.toList());
     }
 }
