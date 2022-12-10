@@ -1,14 +1,14 @@
 package pairmatching.validator;
 
-public class InputValidator {
+import static pairmatching.enums.OperationCommand.QUIT;
 
-    private static final String QUIT = "Q";
+public class InputValidator {
 
     public String validateOperation(String input){
 
     }
 
-    private boolean isNotQ(String input){
-        return !input.equals(QUIT);
+    private boolean isQ(String input){
+        return input.equals(QUIT.getCommand());
     }
 }

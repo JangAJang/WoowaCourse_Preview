@@ -61,9 +61,11 @@ QUIT("Q"), MATCH_PAIR("1"), READ_PAIR("2"), CLEAR("3")을 가지며 getCommand�
 ## Validator
 ### InputValidator
 1. validateOperation : 입력변수가 1부터 3이 아니거나 Q가 아니면 예외처리하고, 맞다면 문자열로 반환한다. 
-   1. isNotQ : 입력변수가 "Q"가 아니면 참을 반환한다. 
-   2. isNotFromOneToThree : 1부터 3이 아니면 참을 반환한다. 
-   3. notOperationException : 정해진 기능이 아님을 알리고 예외처리한다.
+   1. isQ : Quit.getCommand면 참을 반환한다. 
+   2. isPairMatch : PAIR_MATCH.getCommand와 같으면 참을 반환한다. 
+   3. isReaPair : READ_PAIR.getCommand면 참을 반환한다. 
+   4. isClear : CLEAR.getCommand와 같으면 참을 반환한다. 
+   5. notOperationException : 정해진 기능이 아님을 알리고 예외처리한다.
 
 2. validateMissionChoice : 입력변수를 미션 선택에 관한 리스트로 나눌때 길이에 대한 예외처리해준다. 
    1. separateComponent : 입력변수를 ", "로 나누어 리스트로 반환한다. 
