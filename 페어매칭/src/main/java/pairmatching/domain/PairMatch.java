@@ -1,5 +1,6 @@
 package pairmatching.domain;
 
+import camp.nextstep.edu.missionutils.Randoms;
 import pairmatching.enums.Course;
 import pairmatching.enums.Level;
 import pairmatching.enums.Mission;
@@ -58,6 +59,10 @@ public class PairMatch {
     private List<String> getMembers(){
         if(isBackEnd()) return enlistNamesFrom(BACK_END);
         return enlistNamesFrom(FRONT_END);
+    }
+
+    private List<String> shuffleMembersOrder(List<String> members){
+        return Randoms.shuffle(members);
     }
 
     private boolean isBackEnd(){
