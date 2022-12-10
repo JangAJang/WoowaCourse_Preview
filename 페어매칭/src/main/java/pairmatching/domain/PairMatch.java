@@ -5,8 +5,13 @@ import pairmatching.enums.Level;
 import pairmatching.enums.Mission;
 import pairmatching.validator.PairMatchValidator;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class PairMatch {
 
@@ -50,6 +55,18 @@ public class PairMatch {
 
     private boolean isBackEnd(){
         return course.equals(Course.BACKEND);
+    }
+
+    private List<String> enlistBackEndCrew(){
+        File file = new File(Objects.requireNonNull(this.getClass().getClassLoader().getResource("test.txt")).getFile());
+        List<String> names = new ArrayList<>();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            bufferedReader.lines().forEach(names::add);
+        } catch (FileNotFoundException e) {
+            throw new IllegalArgumentException();
+        }
+        return names;
     }
 
     public boolean hasSamePairBefore(){
