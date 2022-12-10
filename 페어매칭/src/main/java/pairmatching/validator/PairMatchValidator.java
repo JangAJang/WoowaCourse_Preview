@@ -10,6 +10,7 @@ import static pairmatching.enums.Level.*;
 public class PairMatchValidator {
 
     private static final String NOT_RIGHT_COURSE = "[ERROR] 입력한 코스가 존재하지 않습니다.";
+    private static final String NO_MISSION_FOR_LEVEL = "[ERROR] 해당 레벨에는 미션이 존재하지 않습니다.";
 
     public Course validateCourse(String name){
         if(isBackEnd(name)) return BACKEND;
@@ -27,7 +28,10 @@ public class PairMatchValidator {
     }
 
     private Level validateLevel(String level){
-
+        if(isLevelOne(level)) return ONE;
+        if(isLevelTwo(level)) return TWO;
+        if(isLevelFour(level)) return FOUR;
+        if(isLevelThreeOrFive(level)) noMissionForLevelException();
     }
 
     private boolean isLevelOne(String level){
@@ -45,5 +49,10 @@ public class PairMatchValidator {
     private boolean isLevelThreeOrFive(String level){
         return level.equals(THREE.getName()) ||
                 level.equals(FIVE.getName());
+    }
+
+    private void noMissionForLevelException(){
+        System.out.println(NO_MISSION_FOR_LEVEL);
+        throw new IllegalArgumentException();
     }
 }
