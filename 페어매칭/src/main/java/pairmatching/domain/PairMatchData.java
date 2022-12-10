@@ -41,6 +41,9 @@ public class PairMatchData {
     }
 
     public boolean containsExistingDataAlready(List<String> components){
+        for(PairMatch pairMatchEach : pairMatches){
+            if(pairMatchEach.isSame(components)) return true;
+        }
         return false;
     }
 
