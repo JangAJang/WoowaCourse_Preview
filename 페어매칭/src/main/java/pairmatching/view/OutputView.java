@@ -5,10 +5,15 @@ import java.util.List;
 public class OutputView {
 
     private static final String RESULT_START = "페어 매칭 결과입니다";
+    private static final String SUCCESS_RESET = "초기화되었습니다";
 
     public void printMatchingResult(List<List<String>> members){
         printResultStarting();
         printEachPair(members);
+    }
+
+    public void printResetSuccess(){
+        System.out.println(SUCCESS_RESET);
     }
 
     private void printResultStarting(){
