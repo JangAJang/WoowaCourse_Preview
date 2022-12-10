@@ -65,6 +65,10 @@ public class PairMatch {
         return Randoms.shuffle(members);
     }
 
+    private void createPairs(List<String> members){
+        pairs = new Pairs(members);
+    }
+
     private boolean isBackEnd(){
         return course.equals(Course.BACKEND);
     }
