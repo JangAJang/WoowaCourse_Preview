@@ -114,14 +114,13 @@ QUIT("Q"), MATCH_PAIR("1"), READ_PAIR("2"), CLEAR("3")을 가지며 getCommand�
    2. isYes : "네"면 참을 반환한다.
 
 ### OutputView
-1. showBluePrint : 과정, 레벨당 미션을 전부 출력해준다. 
-2. printMatchingResult : 페어 매칭 결과를 출력한다.
+1. printMatchingResult : 페어 매칭 결과를 출력한다.
    1. printResultStarting : '페어 매칭 결과입니다'를 출력한다. 
    2. printResultPairs : List<List<String>>으로 받은모든 페어를 출력시킨다. 
       1. printEachpair : List<String>을 출력시켜준다. 
          1. appendWithSeparator : List의 사이마다 ' : '를 넣어 문자열로 반환한다. 
          2. printLine : 입력문자열을 출력한다.
-3. printResetSuccess : "초기화되었습니다"를 출력해준다. 
+2. printResetSuccess : "초기화되었습니다"를 출력해준다. 
 
 ## Controller
 ### PairMatchDataController
