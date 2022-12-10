@@ -92,4 +92,8 @@ public class PairMatchValidator {
     private boolean isPayment(String mission){
         return mission.equals(PAYMENT.getName());
     }
+
+    private boolean isSubway(String mission){
+        return mission.equals(SUBWAY.getName());
+    }
 }
