@@ -100,4 +100,8 @@ public class PairMatchValidator {
     private boolean isImprove(String mission){
         return mission.equals(IMPROVE.getName());
     }
+
+    private boolean isDistribute(String mission){
+        return mission.equals(DISTRIBUTE.getName());
+    }
 }
