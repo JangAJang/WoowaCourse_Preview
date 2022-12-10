@@ -31,7 +31,7 @@ public class PairMatchValidator {
         return name.equals(FRONTEND.getName());
     }
 
-    private Level validateLevel(String level){
+    public Level validateLevel(String level){
         if(isLevelOne(level)) return ONE;
         if(isLevelTwo(level)) return TWO;
         if(isLevelFour(level)) return FOUR;
