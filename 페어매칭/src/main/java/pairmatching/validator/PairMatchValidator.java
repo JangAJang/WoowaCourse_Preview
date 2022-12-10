@@ -2,10 +2,12 @@ package pairmatching.validator;
 
 import pairmatching.enums.Course;
 import pairmatching.enums.Level;
+import pairmatching.enums.Mission;
 
 import static pairmatching.enums.Course.BACKEND;
 import static pairmatching.enums.Course.FRONTEND;
 import static pairmatching.enums.Level.*;
+import static pairmatching.enums.Mission.*;
 
 public class PairMatchValidator {
 
@@ -61,5 +63,25 @@ public class PairMatchValidator {
     private Level notRightLevelException(){
         System.out.println(NOT_RIGHT_LEVEL);
         throw new IllegalArgumentException();
+    }
+
+    public Mission validateMission(String level, String mission){
+
+    }
+
+    private Mission getLevelOneMission(String mission){
+
+    }
+
+    private boolean isRacing(String mission){
+        return mission.equals(RACING.getName());
+    }
+
+    private boolean isLotto(String mission){
+        return mission.equals(LOTTO.getName());
+    }
+
+    private boolean isBaseball(String mission){
+        return mission.equals(BASEBALL.getName());
     }
 }
