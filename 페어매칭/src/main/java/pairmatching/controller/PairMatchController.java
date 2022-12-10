@@ -7,8 +7,7 @@ import pairmatching.view.OutputView;
 
 import java.util.List;
 
-import static pairmatching.enums.OperationCommand.MATCH_PAIR;
-import static pairmatching.enums.OperationCommand.READ_PAIR;
+import static pairmatching.enums.OperationCommand.*;
 
 public class PairMatchController {
 
@@ -65,5 +64,14 @@ public class PairMatchController {
         outputView.printMatchingResult(
                 pairMatchData.readPairMatch(
                         inputView.readMissionChoice()));
+    }
+
+    private boolean isResetPairs(OperationCommand operationCommand){
+        return operationCommand.equals(CLEAR);
+    }
+
+    private void resetPair(){
+        pairMatchData.resetData();
+        outputView.printResetSuccess();
     }
 }
