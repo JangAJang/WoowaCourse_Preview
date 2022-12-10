@@ -19,6 +19,16 @@ public class Pairs {
     }
 
     public boolean isDuplicatedPairs(Pairs other){
+        for(Pair pairEach : other.getPairs()){
+            if(containsPair(pairEach)) return true;
+        }
+        return false;
+    }
+
+    private boolean containsPair(Pair pairEach){
+        for(Pair pair : pairs){
+            if(pair.containsPair(pairEach.getNames())) return true;
+        }
         return false;
     }
 }
