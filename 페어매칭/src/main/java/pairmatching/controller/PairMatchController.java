@@ -17,10 +17,18 @@ public class PairMatchController {
 
     public void runPairMatching(){
         OperationCommand command;
-        command = inputView.readOperation();
+        command = getCommand();
         while(!command.equals(QUIT)){
             runEachRound(command);
-            command = inputView.readOperation();
+            command = getCommand();
+        }
+    }
+
+    private OperationCommand getCommand(){
+        try{
+            return inputView.readOperation();
+        }catch (IllegalArgumentException e){
+            return getCommand();
         }
     }
 
@@ -35,12 +43,16 @@ public class PairMatchController {
     }
 
     private void matchPair(){
-        List<String> component = readPairMatchingMission();
-        if(isAlreadyExistingMission(component)){
-            rematchPair(component);
-            return;
+        try{
+            List<String> component = readPairMatchingMission();
+            if(isAlreadyExistingMission(component)){
+                rematchPair(component);
+                return;
+            }
+            printResult(createPairs(component));
+        }catch (IllegalArgumentException e){
+            matchPair();
         }
-        printResult(createPairs(component));
     }
 
     private void rematchPair(List<String> component){
@@ -48,7 +60,11 @@ public class PairMatchController {
     }
 
     private List<String> readPairMatchingMission(){
-        return inputView.readMissionChoice();
+        try{
+            return inputView.readMissionChoice();
+        }catch (IllegalArgumentException e){
+            return readPairMatchingMission();
+        }
     }
 
     private boolean isAlreadyExistingMission(List<String> component){
@@ -56,7 +72,11 @@ public class PairMatchController {
     }
 
     private boolean isRequiringRematch(){
-        return inputView.readRematch();
+        try{
+            return inputView.readRematch();
+        }catch (IllegalArgumentException e){
+            return isRequiringRematch();
+        }
     }
 
     private List<List<String>> createPairs(List<String> component){
@@ -76,9 +96,13 @@ public class PairMatchController {
     }
 
     private void readPair(){
-        outputView.printMatchingResult(
-                pairMatchData.readPairMatch(
-                        inputView.readMissionChoice()));
+        try{
+            outputView.printMatchingResult(
+                    pairMatchData.readPairMatch(
+                            inputView.readMissionChoice()));
+        }catch (IllegalArgumentException e){
+            readPair();
+        }
     }
 
     private boolean isResetPairs(OperationCommand operationCommand){
