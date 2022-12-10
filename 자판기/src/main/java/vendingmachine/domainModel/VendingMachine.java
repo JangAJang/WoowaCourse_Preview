@@ -10,7 +10,7 @@ import java.util.List;
 
 public class VendingMachine {
 
-    private Coins coins;
+    private final Coins coins;
     private Items items;
     private InsertedMoney insertedMoney;
 
