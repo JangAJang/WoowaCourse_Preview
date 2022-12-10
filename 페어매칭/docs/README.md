@@ -13,6 +13,9 @@ SHOPPING("장바구니"), PAYMENT("결제"), SUBWAY("지하철노선도"),
 IMPROVE("성능개선"), DISTRIBUTE("배포")
 로 이루어져 있고, name으로 인스턴스를 호출한다. 
 
+### OperationCommand
+QUIT("Q"), MATCH_PAIR("1"), READ_PAIR("2"), CLEAR("3")을 가지며 getCommand로 문자열을 반환한다. 
+
 ## Domain
 
 ### Pair
